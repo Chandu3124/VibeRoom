@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="The requested VibeRoomz page could not be found."
+    >
+
+    <title>VibeRoomz | Page Not Found</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="logo_light.png"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="main.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="error.css"
+    >
+
+    <script>
+        (() => {
+            try {
+                const savedTheme =
+                    localStorage.getItem("theme");
+
+                const savedDirection =
+                    localStorage.getItem("direction");
+
+                document.documentElement.dir =
+                    savedDirection === "rtl"
+                        ? "rtl"
+                        : "ltr";
+
+                document.documentElement.dataset.theme =
+                    savedTheme === "dark"
+                        ? "dark"
+                        : "light";
+            } catch (error) {
+                document.documentElement.dir = "ltr";
+                document.documentElement.dataset.theme = "light";
+            }
+        })();
+    </script>
+</head>
+
+<body class="error-page-body">
+
+    <main class="error-page">
+
+        <!-- 404 content -->
+
+        <section
+            class="error-card"
+            aria-labelledby="errorTitle"
+        >
+
+            <!-- Header-style logo -->
+
+            <a
+                href="index.html"
+                class="error-brand"
+                aria-label="VibeRoomz Home"
+            >
+
+                <span class="error-brand-icon">
+                    <img
+                        id="errorLogo"
+                        src="logo_light.png"
+                        data-light-logo="logo_light.png"
+                        data-dark-logo="logo_dark.png"
+                        alt="VibeRoomz Logo"
+                    >
+                </span>
+
+                <span class="error-brand-divider"></span>
+
+                <span class="error-brand-content">
+                    <strong class="error-brand-name">
+                        <span class="vibe">VIBE</span><span class="roomz">ROOMZ</span>
+                    </strong>
+
+                    <small>
+                        KARAOKE &amp; PARTY ROOM RENTAL
+                    </small>
+                </span>
+
+            </a>
+
+
+            <!-- Error icon -->
+
+            <div
+                class="error-icon"
+                aria-hidden="true"
+            >
+                <i data-lucide="search-x"></i>
+            </div>
+
+
+            <!-- Error number -->
+
+            <div
+                class="error-number"
+                aria-hidden="true"
+            >
+                4<span>0</span>4
+            </div>
+
+
+            <h1 id="errorTitle">
+                Page <span>Not Found</span>
+            </h1>
+
+            <p class="error-description">
+                Sorry, the page you're looking for doesn't exist
+                or may have been moved.
+            </p>
+
+
+            <a
+                href="index.html"
+                class="error-home-button"
+            >
+                <i
+                    data-lucide="house"
+                    aria-hidden="true"
+                ></i>
+
+                <span>
+                    Back to Home
+                </span>
+            </a>
+
+        </section>
+
+
+        <!-- Page controls -->
+
+        <div class="error-controls">
+
+            <button
+                class="error-control"
+                id="errorRtlToggle"
+                type="button"
+                aria-label="Switch to right-to-left layout"
+                aria-pressed="false"
+                title="Toggle RTL mode"
+            >
+                <i data-lucide="arrow-left-right"></i>
+            </button>
+
+            <button
+                class="error-control"
+                id="errorThemeToggle"
+                type="button"
+                aria-label="Switch to dark mode"
+                aria-pressed="false"
+                title="Toggle dark mode"
+            >
+                <i data-lucide="moon"></i>
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script src="main.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const html = document.documentElement;
+    const body = document.body;
+
+    const themeToggle =
+        document.getElementById("errorThemeToggle");
+
+    const rtlToggle =
+        document.getElementById("errorRtlToggle");
+
+    const logo =
+        document.getElementById("errorLogo");
+
+
+    const THEME_KEY = "theme";
+    const DIRECTION_KEY = "direction";
+
+
+    function refreshIcons() {
+        if (
+            window.lucide &&
+            typeof window.lucide.createIcons === "function"
+        ) {
+            window.lucide.createIcons();
+        }
+    }
+
+
+    function getStorage(key, fallback = null) {
+        try {
+            return localStorage.getItem(key) || fallback;
+        } catch (error) {
+            return fallback;
+        }
+    }
+
+
+    function setStorage(key, value) {
+        try {
+            localStorage.setItem(key, value);
+
+            window.dispatchEvent(
+                new CustomEvent(
+                    "viberoomz-storage-change",
+                    {
+                        detail: {
+                            key,
+                            value
+                        }
+                    }
+                )
+            );
+        } catch (error) {
+            return;
+        }
+    }
+
+
+    function updateLogo(isDark) {
+        if (!logo) {
+            return;
+        }
+
+        const lightLogo =
+            logo.dataset.lightLogo;
+
+        const darkLogo =
+            logo.dataset.darkLogo;
+
+        logo.src =
+            isDark && darkLogo
+                ? darkLogo
+                : lightLogo;
+    }
+
+
+    function updateTheme(
+        theme,
+        broadcast = false
+    ) {
+        const isDark =
+            theme === "dark";
+
+        body.classList.toggle(
+            "dark-mode",
+            isDark
+        );
+
+        html.dataset.theme =
+            isDark ? "dark" : "light";
+
+        updateLogo(isDark);
+
+        if (themeToggle) {
+            themeToggle.innerHTML = `
+                <i data-lucide="${isDark ? "sun" : "moon"}"></i>
+            `;
+
+            themeToggle.setAttribute(
+                "aria-label",
+                isDark
+                    ? "Switch to light mode"
+                    : "Switch to dark mode"
+            );
+
+            themeToggle.setAttribute(
+                "aria-pressed",
+                String(isDark)
+            );
+        }
+
+        refreshIcons();
+
+        if (broadcast) {
+            window.dispatchEvent(
+                new CustomEvent(
+                    "viberoomz-theme-change",
+                    {
+                        detail: {
+                            theme: isDark
+                                ? "dark"
+                                : "light"
+                        }
+                    }
+                )
+            );
+        }
+    }
+
+
+    function updateDirection(
+        direction,
+        broadcast = false
+    ) {
+        const isRTL =
+            direction === "rtl";
+
+        html.dir =
+            isRTL ? "rtl" : "ltr";
+
+        if (rtlToggle) {
+            rtlToggle.innerHTML =
+                '<i data-lucide="arrow-left-right"></i>';
+
+            rtlToggle.setAttribute(
+                "aria-label",
+                isRTL
+                    ? "Switch to left-to-right layout"
+                    : "Switch to right-to-left layout"
+            );
+
+            rtlToggle.setAttribute(
+                "aria-pressed",
+                String(isRTL)
+            );
+        }
+
+        refreshIcons();
+
+        if (broadcast) {
+            window.dispatchEvent(
+                new CustomEvent(
+                    "viberoomz-direction-change",
+                    {
+                        detail: {
+                            direction: isRTL
+                                ? "rtl"
+                                : "ltr"
+                        }
+                    }
+                )
+            );
+        }
+    }
+
+
+    themeToggle?.addEventListener(
+        "click",
+        () => {
+            const currentTheme =
+                body.classList.contains("dark-mode")
+                    ? "dark"
+                    : "light";
+
+            const newTheme =
+                currentTheme === "dark"
+                    ? "light"
+                    : "dark";
+
+            setStorage(
+                THEME_KEY,
+                newTheme
+            );
+
+            updateTheme(
+                newTheme,
+                true
+            );
+        }
+    );
+
+
+    rtlToggle?.addEventListener(
+        "click",
+        () => {
+            const currentDirection =
+                html.dir === "rtl"
+                    ? "rtl"
+                    : "ltr";
+
+            const newDirection =
+                currentDirection === "rtl"
+                    ? "ltr"
+                    : "rtl";
+
+            setStorage(
+                DIRECTION_KEY,
+                newDirection
+            );
+
+            updateDirection(
+                newDirection,
+                true
+            );
+        }
+    );
+
+
+    window.addEventListener(
+        "viberoomz-storage-change",
+        (event) => {
+            const key =
+                event.detail?.key;
+
+            const value =
+                event.detail?.value;
+
+            if (key === THEME_KEY) {
+                updateTheme(
+                    value || "light"
+                );
+            }
+
+            if (key === DIRECTION_KEY) {
+                updateDirection(
+                    value || "ltr"
+                );
+            }
+        }
+    );
+
+
+    window.addEventListener(
+        "storage",
+        (event) => {
+            if (event.key === THEME_KEY) {
+                updateTheme(
+                    event.newValue || "light"
+                );
+            }
+
+            if (event.key === DIRECTION_KEY) {
+                updateDirection(
+                    event.newValue || "ltr"
+                );
+            }
+        }
+    );
+
+
+    window.addEventListener(
+        "viberoomz-theme-change",
+        (event) => {
+            updateTheme(
+                event.detail?.theme || "light"
+            );
+        }
+    );
+
+
+    window.addEventListener(
+        "viberoomz-direction-change",
+        (event) => {
+            updateDirection(
+                event.detail?.direction || "ltr"
+            );
+        }
+    );
+
+
+    const savedTheme =
+        getStorage(THEME_KEY) ||
+        (
+            window.matchMedia &&
+            window.matchMedia(
+                "(prefers-color-scheme: dark)"
+            ).matches
+                ? "dark"
+                : "light"
+        );
+
+    const savedDirection =
+        getStorage(
+            DIRECTION_KEY
+        ) || "ltr";
+
+
+    updateTheme(savedTheme);
+    updateDirection(savedDirection);
+    refreshIcons();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="VibeRoomz customer login and account registration"
+    >
+
+    <title>VibeRoomz | Login</title>
+
+    <link rel="icon" type="image/png" href="logo_light.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="login.css">
+
+    <script>
+        (() => {
+            try {
+                const savedTheme =
+                    localStorage.getItem("theme");
+
+                const savedDirection =
+                    localStorage.getItem("direction");
+
+                document.documentElement.dir =
+                    savedDirection === "rtl"
+                        ? "rtl"
+                        : "ltr";
+
+                document.documentElement.dataset.theme =
+                    savedTheme === "dark"
+                        ? "dark"
+                        : "light";
+            } catch (error) {
+                document.documentElement.dir = "ltr";
+                document.documentElement.dataset.theme = "light";
+            }
+        })();
+    </script>
+</head>
+
+<body class="login-page">
+
+    <main class="auth-page">
+
+        <div
+            class="auth-background"
+            aria-hidden="true"
+        ></div>
+
+        <div
+            class="auth-overlay"
+            aria-hidden="true"
+        ></div>
+
+
+        <!-- Theme and RTL controls -->
+
+        <div class="auth-controls">
+
+            <button
+                class="auth-control"
+                id="authRtlToggle"
+                type="button"
+                aria-label="Switch to right-to-left layout"
+                aria-pressed="false"
+                title="Toggle RTL mode"
+            >
+                <i data-lucide="arrow-left-right"></i>
+            </button>
+
+            <button
+                class="auth-control"
+                id="authThemeToggle"
+                type="button"
+                aria-label="Switch to dark mode"
+                aria-pressed="false"
+                title="Toggle dark mode"
+            >
+                <i data-lucide="moon"></i>
+            </button>
+
+        </div>
+
+
+        <section
+            class="auth-container"
+            aria-label="Account authentication"
+        >
+
+            <!-- =================================================
+                 LOGIN CARD
+            ================================================== -->
+
+            <article
+                class="auth-card login-card"
+                id="loginCard"
+            >
+
+                <!-- Header-style logo -->
+
+                <a
+                    href="index.html"
+                    class="auth-brand"
+                    aria-label="VibeRoomz Home"
+                >
+
+                    <span class="auth-brand-icon">
+                        <img
+                            id="authLogo"
+                            src="logo_light.png"
+                            data-light-logo="logo_light.png"
+                            data-dark-logo="logo_dark.png"
+                            alt="VibeRoomz Logo"
+                        >
+                    </span>
+
+                    <span class="auth-brand-divider"></span>
+
+                    <span class="auth-brand-content">
+                        <strong class="auth-brand-name">
+                            <span class="vibe">VIBE</span><span class="roomz">ROOMZ</span>
+                        </strong>
+
+                        <small>
+                            KARAOKE &amp; PARTY ROOM RENTAL
+                        </small>
+                    </span>
+
+                </a>
+
+
+                <header class="auth-heading">
+                    <h1>
+                        Customer <span>Login</span>
+                    </h1>
+
+                    <p>
+                        Welcome back! Sign in to manage your bookings.
+                    </p>
+                </header>
+
+
+                <!-- Login form -->
+
+                <form
+                    class="auth-form"
+                    id="loginForm"
+                    novalidate
+                >
+
+                    <div class="auth-field">
+                        <label for="loginEmail">
+                            Email Address
+                        </label>
+
+                        <div class="input-wrap">
+                            <i
+                                data-lucide="mail"
+                                aria-hidden="true"
+                            ></i>
+
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                name="email"
+                                placeholder="Enter your email address"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <div class="auth-field">
+                        <label for="loginPassword">
+                            Password
+                        </label>
+
+                        <div class="input-wrap">
+                            <i
+                                data-lucide="lock-keyhole"
+                                aria-hidden="true"
+                            ></i>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="loginPasswordToggle"
+                                aria-label="Show password"
+                                aria-pressed="false"
+                            >
+                                <i data-lucide="eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="auth-options">
+
+                        <label class="remember-option">
+                            <input
+                                type="checkbox"
+                                id="rememberMe"
+                                name="remember"
+                            >
+
+                            <span>
+                                Remember me
+                            </span>
+                        </label>
+
+                        <a
+                            href="#"
+                            class="forgot-link"
+                        >
+                            Forgot password?
+                        </a>
+
+                    </div>
+
+
+                    <p
+                        class="form-message"
+                        id="loginMessage"
+                        role="alert"
+                    ></p>
+
+
+                    <button
+                        type="submit"
+                        class="auth-primary-button"
+                    >
+                        <span>Login</span>
+
+                        <i
+                            data-lucide="arrow-right"
+                            aria-hidden="true"
+                        ></i>
+                    </button>
+
+                </form>
+
+
+                <div class="auth-divider">
+                    <span>or continue with</span>
+                </div>
+
+
+                <div class="social-buttons">
+
+                    <button
+                        type="button"
+                        class="social-button"
+                    >
+                        <i
+                            class="fa-brands fa-apple"
+                            aria-hidden="true"
+                        ></i>
+
+                        <span>Apple</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="social-button"
+                    >
+                        <i
+                            class="fa-brands fa-google"
+                            aria-hidden="true"
+                        ></i>
+
+                        <span>Google</span>
+                    </button>
+
+                </div>
+
+
+                <div class="auth-switch">
+                    <span>
+                        New customer?
+                    </span>
+
+                    <button
+                        type="button"
+                        id="showSignup"
+                    >
+                        Create account
+                    </button>
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 SIGNUP CARD
+            ================================================== -->
+
+            <article
+                class="auth-card signup-card"
+                id="signupCard"
+                hidden
+            >
+
+                <!-- Header-style logo -->
+
+                <a
+                    href="index.html"
+                    class="auth-brand"
+                    aria-label="VibeRoomz Home"
+                >
+
+                    <span class="auth-brand-icon">
+                        <img
+                            class="signup-logo"
+                            src="logo_light.png"
+                            data-light-logo="logo_light.png"
+                            data-dark-logo="logo_dark.png"
+                            alt="VibeRoomz Logo"
+                        >
+                    </span>
+
+                    <span class="auth-brand-divider"></span>
+
+                    <span class="auth-brand-content">
+                        <strong class="auth-brand-name">
+                            <span class="vibe">VIBE</span><span class="roomz">ROOMZ</span>
+                        </strong>
+
+                        <small>
+                            KARAOKE &amp; PARTY ROOM RENTAL
+                        </small>
+                    </span>
+
+                </a>
+
+
+                <header class="auth-heading">
+                    <h1>
+                        Create <span>Account</span>
+                    </h1>
+
+                    <p>
+                        Join VibeRoomz and plan your next party.
+                    </p>
+                </header>
+
+
+                <!-- Signup form -->
+
+                <form
+                    class="auth-form signup-form"
+                    id="signupForm"
+                    novalidate
+                >
+
+                    <!-- Full Name -->
+
+                    <div class="auth-field">
+                        <label for="signupName">
+                            Full Name
+                        </label>
+
+                        <div class="input-wrap">
+                            <i
+                                data-lucide="user-round"
+                                aria-hidden="true"
+                            ></i>
+
+                            <input
+                                type="text"
+                                id="signupName"
+                                name="name"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="auth-field">
+                        <label for="signupEmail">
+                            Email Address
+                        </label>
+
+                        <div class="input-wrap">
+                            <i
+                                data-lucide="mail"
+                                aria-hidden="true"
+                            ></i>
+
+                            <input
+                                type="email"
+                                id="signupEmail"
+                                name="email"
+                                placeholder="Enter your email address"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="auth-field">
+                        <label for="signupPhone">
+                            Phone Number
+                        </label>
+
+                        <div class="input-wrap">
+                            <i
+                                data-lucide="phone"
+                                aria-hidden="true"
+                            ></i>
+
+                            <input
+                                type="tel"
+                                id="signupPhone"
+                                name="phone"
+                                placeholder="Enter your phone number"
+                                autocomplete="tel"
+                                inputmode="tel"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <!-- City -->
+
+                    <div class="auth-field">
+                        <label for="signupCity">
+                            City
+                        </label>
+
+                        <div class="input-wrap">
+                            <i
+                                data-lucide="map-pin"
+                                aria-hidden="true"
+                            ></i>
+
+                            <input
+                                type="text"
+                                id="signupCity"
+                                name="city"
+                                placeholder="Enter your city"
+                                autocomplete="address-level2"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <!-- Create Password -->
+
+                    <div class="auth-field">
+                        <label for="signupPassword">
+                            Create Password
+                        </label>
+
+                        <div class="input-wrap">
+                            <i
+                                data-lucide="lock-keyhole"
+                                aria-hidden="true"
+                            ></i>
+
+                            <input
+                                type="password"
+                                id="signupPassword"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="signupPasswordToggle"
+                                aria-label="Show password"
+                                aria-pressed="false"
+                            >
+                                <i data-lucide="eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <!-- Confirm Password -->
+
+                    <div class="auth-field">
+                        <label for="signupConfirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <div class="input-wrap">
+                            <i
+                                data-lucide="shield-check"
+                                aria-hidden="true"
+                            ></i>
+
+                            <input
+                                type="password"
+                                id="signupConfirmPassword"
+                                name="confirmPassword"
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="signupConfirmPasswordToggle"
+                                aria-label="Show password"
+                                aria-pressed="false"
+                            >
+                                <i data-lucide="eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <!-- Terms -->
+
+                    <label class="terms-option">
+                        <input
+                            type="checkbox"
+                            id="signupTerms"
+                            required
+                        >
+
+                        <span>
+                            I agree to the Terms &amp; Conditions and Privacy Policy.
+                        </span>
+                    </label>
+
+
+                    <p
+                        class="form-message"
+                        id="signupMessage"
+                        role="alert"
+                    ></p>
+
+
+                    <button
+                        type="submit"
+                        class="auth-primary-button"
+                    >
+                        <span>
+                            Create Account
+                        </span>
+
+                        <i
+                            data-lucide="user-plus"
+                            aria-hidden="true"
+                        ></i>
+                    </button>
+
+                </form>
+
+
+                <div class="auth-divider">
+                    <span>
+                        or continue with
+                    </span>
+                </div>
+
+
+                <div class="social-buttons">
+
+                    <button
+                        type="button"
+                        class="social-button"
+                    >
+                        <i
+                            class="fa-brands fa-apple"
+                            aria-hidden="true"
+                        ></i>
+
+                        <span>
+                            Apple
+                        </span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="social-button"
+                    >
+                        <i
+                            class="fa-brands fa-google"
+                            aria-hidden="true"
+                        ></i>
+
+                        <span>
+                            Google
+                        </span>
+                    </button>
+
+                </div>
+
+
+                <div class="auth-switch">
+                    <span>
+                        Already have an account?
+                    </span>
+
+                    <button
+                        type="button"
+                        id="showLogin"
+                    >
+                        Login
+                    </button>
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script src="login.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

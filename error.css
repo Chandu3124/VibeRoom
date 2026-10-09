@@ -1,0 +1,602 @@
+/* =========================================================
+   VIBEROOMZ 404 PAGE
+   Uses variables from main.css
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+html:has(.error-page),
+body.error-page-body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body.error-page-body {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    overflow: hidden;
+
+    background: var(--soft-bg);
+    color: var(--text-dark);
+    font-family: var(--body-font);
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.error-page {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    display: grid;
+    place-items: center;
+
+    padding: 24px;
+
+    overflow: hidden;
+
+    background: var(--soft-bg);
+    color: var(--text-dark);
+}
+
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.error-controls {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.error-control {
+    width: 44px;
+    height: 44px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid var(--border-color);
+    border-radius: 11px;
+
+    background: var(--card-bg);
+    color: var(--text-dark);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.error-control:hover {
+    transform: translateY(-2px);
+
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.error-control svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.error-card {
+    width: min(100%, 650px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 52px 58px;
+
+    text-align: center;
+
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+
+    background: var(--card-bg);
+    color: var(--text-dark);
+
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.16);
+
+    animation: error-card-in 0.65s ease both;
+}
+
+@keyframes error-card-in {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   HEADER-STYLE LOGO
+========================================================= */
+
+.error-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    max-width: 100%;
+
+    gap: 8px;
+    margin: 0 auto 32px;
+}
+
+.error-brand-icon {
+    width: 88px;
+    height: 88px;
+
+    flex: 0 0 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-brand-icon img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: contain;
+
+    animation: none;
+    transform: none;
+}
+
+.error-brand-divider {
+    width: 1px;
+    height: 52px;
+
+    flex: 0 0 1px;
+
+    background: var(--border-color);
+}
+
+.error-brand-content {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: left;
+}
+
+.error-brand-name {
+    display: block;
+
+    margin: 0;
+
+    font-size: 29px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+    white-space: nowrap;
+}
+
+.error-brand-name .vibe {
+    color: var(--primary-color);
+}
+
+.error-brand-name .roomz {
+    color: var(--secondary-color);
+}
+
+.error-brand-content small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ERROR ICON
+========================================================= */
+
+.error-icon {
+    width: 94px;
+    height: 94px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border: 1px solid var(--primary-color);
+    border-radius: 24px;
+
+    background: var(--soft-bg);
+    color: var(--primary-color);
+
+    animation: error-icon-pulse 2.4s ease-in-out infinite;
+}
+
+.error-icon svg {
+    width: 43px;
+    height: 43px;
+}
+
+@keyframes error-icon-pulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+
+/* =========================================================
+   ERROR NUMBER
+========================================================= */
+
+.error-number {
+    color: var(--secondary-color);
+
+    font-size: 102px;
+    line-height: 0.85;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.error-number span {
+    color: var(--primary-color);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.error-card h1 {
+    margin: 24px 0 10px;
+
+    color: var(--text-dark);
+
+    font-size: 34px;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.error-card h1 span {
+    color: var(--primary-color);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.error-description {
+    max-width: 470px;
+
+    margin: 0 auto 28px;
+
+    color: var(--text-light);
+
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   HOME BUTTON
+========================================================= */
+
+.error-home-button {
+    min-width: 190px;
+    min-height: 46px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 0 22px;
+
+    border: 1px solid var(--primary-color);
+    border-radius: 11px;
+
+    background: var(--primary-color);
+    color: #FFFFFF;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.error-home-button:hover {
+    transform: translateY(-2px);
+
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.error-home-button svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* =========================================================
+   RTL
+========================================================= */
+
+html[dir="rtl"] .error-controls {
+    right: auto;
+    left: 24px;
+}
+
+html[dir="rtl"] .error-card {
+    direction: rtl;
+}
+
+html[dir="rtl"] .error-brand-content {
+    text-align: right;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 760px) {
+    .error-card {
+        width: min(100%, 590px);
+        padding: 44px 38px;
+    }
+
+    .error-brand-icon {
+        width: 78px;
+        height: 78px;
+        flex-basis: 78px;
+    }
+
+    .error-brand-divider {
+        height: 47px;
+    }
+
+    .error-brand-name {
+        font-size: 26px;
+    }
+
+    .error-brand-content small {
+        font-size: 9px;
+    }
+
+    .error-number {
+        font-size: 88px;
+    }
+
+    .error-card h1 {
+        font-size: 30px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+    .error-page {
+        padding: 74px 14px 20px;
+    }
+
+    .error-controls {
+        top: 14px;
+        right: 14px;
+    }
+
+    html[dir="rtl"] .error-controls {
+        right: auto;
+        left: 14px;
+    }
+
+    .error-control {
+        width: 40px;
+        height: 40px;
+    }
+
+    .error-control svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .error-card {
+        width: min(100%, 500px);
+        padding: 34px 20px;
+        border-radius: 19px;
+    }
+
+    .error-brand {
+        margin-bottom: 26px;
+    }
+
+    .error-brand-icon {
+        width: 68px;
+        height: 68px;
+        flex-basis: 68px;
+    }
+
+    .error-brand-divider {
+        height: 42px;
+    }
+
+    .error-brand-name {
+        font-size: 22px;
+    }
+
+    .error-brand-content small {
+        margin-top: 5px;
+        font-size: 7px;
+        letter-spacing: 0.7px;
+    }
+
+    .error-icon {
+        width: 78px;
+        height: 78px;
+        margin-bottom: 18px;
+        border-radius: 21px;
+    }
+
+    .error-icon svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .error-number {
+        font-size: 72px;
+        letter-spacing: 2px;
+    }
+
+    .error-card h1 {
+        margin-top: 20px;
+        font-size: 26px;
+    }
+
+    .error-description {
+        max-width: 390px;
+        margin-bottom: 23px;
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .error-home-button {
+        min-width: 175px;
+        min-height: 43px;
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   SHORT HEIGHT
+========================================================= */
+
+@media (max-height: 650px) and (min-width: 561px) {
+    .error-page {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .error-card {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .error-brand {
+        margin-bottom: 19px;
+    }
+
+    .error-brand-icon {
+        width: 68px;
+        height: 68px;
+        flex-basis: 68px;
+    }
+
+    .error-brand-divider {
+        height: 42px;
+    }
+
+    .error-brand-name {
+        font-size: 22px;
+    }
+
+    .error-brand-content small {
+        font-size: 9px;
+    }
+
+    .error-icon {
+        width: 76px;
+        height: 76px;
+        margin-bottom: 15px;
+    }
+
+    .error-number {
+        font-size: 82px;
+    }
+
+    .error-card h1 {
+        margin-top: 17px;
+        font-size: 28px;
+    }
+
+    .error-description {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .error-home-button {
+        min-height: 41px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

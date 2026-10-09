@@ -1,0 +1,665 @@
+/* =========================================================
+   VIBEROOMZ COMING SOON PAGE
+   Uses variables from main.css
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+html:has(.coming-page),
+body.coming-page-body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body.coming-page-body {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    overflow: hidden;
+
+    background: var(--soft-bg);
+    color: var(--text-dark);
+    font-family: var(--body-font);
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.coming-page {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    display: grid;
+    place-items: center;
+
+    padding: 24px;
+
+    overflow: hidden;
+
+    background: var(--soft-bg);
+    color: var(--text-dark);
+}
+
+body.dark-mode .coming-page {
+    background: var(--soft-bg);
+}
+
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.coming-controls {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.coming-control {
+    width: 44px;
+    height: 44px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid var(--border-color);
+    border-radius: 11px;
+
+    background: var(--card-bg);
+    color: var(--text-dark);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.coming-control:hover {
+    transform: translateY(-2px);
+
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.coming-control svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.coming-card {
+    width: min(100%, 680px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 52px 58px;
+
+    text-align: center;
+
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+
+    background: var(--card-bg);
+    color: var(--text-dark);
+
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.16);
+
+    animation: coming-card-in 0.7s ease both;
+}
+
+@keyframes coming-card-in {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   HEADER-STYLE LOGO
+========================================================= */
+
+.coming-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    max-width: 100%;
+
+    gap: 8px;
+
+    margin: 0 auto 34px;
+}
+
+.coming-brand-icon {
+    width: 88px;
+    height: 88px;
+
+    flex: 0 0 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coming-brand-icon img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: contain;
+
+    /* No floating animation */
+    animation: none;
+    transform: none;
+}
+
+.coming-brand-divider {
+    width: 1px;
+    height: 52px;
+
+    flex: 0 0 1px;
+
+    background: var(--border-color);
+}
+
+.coming-brand-content {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: left;
+}
+
+.coming-brand-name {
+    display: block;
+
+    margin: 0;
+
+    font-size: 29px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+    white-space: nowrap;
+}
+
+.coming-brand-name .vibe {
+    color: var(--primary-color);
+}
+
+.coming-brand-name .roomz {
+    color: var(--secondary-color);
+}
+
+.coming-brand-content small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ANIMATED ICON
+========================================================= */
+
+.coming-icon {
+    position: relative;
+
+    width: 94px;
+    height: 94px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 26px;
+
+    border: 1px solid var(--primary-color);
+    border-radius: 24px;
+
+    background: var(--soft-bg);
+    color: var(--primary-color);
+
+    animation: icon-float 2.8s ease-in-out infinite;
+}
+
+.coming-icon svg {
+    position: relative;
+    z-index: 2;
+
+    width: 42px;
+    height: 42px;
+
+    animation: rocket-move 2.2s ease-in-out infinite;
+}
+
+.coming-ring {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 2px solid var(--primary-color);
+    border-radius: 24px;
+
+    opacity: 0.35;
+
+    animation: ring-pulse 2s ease-out infinite;
+}
+
+@keyframes icon-float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes rocket-move {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-4px) rotate(-5deg);
+    }
+}
+
+@keyframes ring-pulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.coming-content {
+    width: 100%;
+}
+
+.coming-label {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--secondary-color);
+
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+}
+
+.coming-content h1 {
+    margin: 0 0 16px;
+
+    color: var(--text-dark);
+
+    font-size: 52px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.coming-content h1 span {
+    color: var(--primary-color);
+}
+
+.coming-content p {
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    color: var(--text-light);
+
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.coming-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 28px;
+}
+
+.coming-dots span {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+    background: var(--primary-color);
+
+    animation: dot-bounce 1.2s ease-in-out infinite;
+}
+
+.coming-dots span:nth-child(2) {
+    background: var(--secondary-color);
+    animation-delay: 0.15s;
+}
+
+.coming-dots span:nth-child(3) {
+    background: var(--accent-color);
+    animation-delay: 0.3s;
+}
+
+@keyframes dot-bounce {
+    0%,
+    60%,
+    100% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(-7px);
+    }
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.coming-message {
+    margin: 19px 0 0;
+
+    color: var(--text-light);
+
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   RTL
+========================================================= */
+
+html[dir="rtl"] .coming-controls {
+    right: auto;
+    left: 24px;
+}
+
+html[dir="rtl"] .coming-card {
+    direction: rtl;
+}
+
+html[dir="rtl"] .coming-brand-content {
+    text-align: right;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 760px) {
+    .coming-card {
+        width: min(100%, 620px);
+        padding: 44px 38px;
+    }
+
+    .coming-brand-icon {
+        width: 78px;
+        height: 78px;
+        flex-basis: 78px;
+    }
+
+    .coming-brand-divider {
+        height: 47px;
+    }
+
+    .coming-brand-name {
+        font-size: 26px;
+    }
+
+    .coming-brand-content small {
+        font-size: 9px;
+    }
+
+    .coming-content h1 {
+        font-size: 46px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+    .coming-page {
+        padding: 74px 14px 20px;
+    }
+
+    .coming-controls {
+        top: 14px;
+        right: 14px;
+    }
+
+    html[dir="rtl"] .coming-controls {
+        right: auto;
+        left: 14px;
+    }
+
+    .coming-control {
+        width: 40px;
+        height: 40px;
+    }
+
+    .coming-control svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .coming-card {
+        width: min(100%, 500px);
+        padding: 34px 20px;
+        border-radius: 19px;
+    }
+
+    .coming-brand {
+        margin-bottom: 27px;
+    }
+
+    .coming-brand-icon {
+        width: 68px;
+        height: 68px;
+        flex-basis: 68px;
+    }
+
+    .coming-brand-divider {
+        height: 42px;
+    }
+
+    .coming-brand-name {
+        font-size: 22px;
+    }
+
+    .coming-brand-content small {
+        margin-top: 5px;
+        font-size: 7px;
+        letter-spacing: 0.7px;
+    }
+
+    .coming-icon {
+        width: 78px;
+        height: 78px;
+        margin-bottom: 22px;
+        border-radius: 21px;
+    }
+
+    .coming-icon svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .coming-ring {
+        border-radius: 21px;
+    }
+
+    .coming-label {
+        font-size: 13px;
+        letter-spacing: 1.2px;
+    }
+
+    .coming-content h1 {
+        font-size: 39px;
+    }
+
+    .coming-content p {
+        max-width: 390px;
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .coming-dots {
+        margin-top: 22px;
+    }
+
+    .coming-message {
+        margin-top: 15px;
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   SHORT HEIGHT
+========================================================= */
+
+@media (max-height: 650px) and (min-width: 561px) {
+    .coming-page {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .coming-card {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .coming-brand {
+        margin-bottom: 20px;
+    }
+
+    .coming-brand-icon {
+        width: 68px;
+        height: 68px;
+        flex-basis: 68px;
+    }
+
+    .coming-brand-divider {
+        height: 42px;
+    }
+
+    .coming-brand-name {
+        font-size: 22px;
+    }
+
+    .coming-brand-content small {
+        font-size: 9px;
+    }
+
+    .coming-icon {
+        width: 76px;
+        height: 76px;
+        margin-bottom: 18px;
+    }
+
+    .coming-content h1 {
+        font-size: 42px;
+    }
+
+    .coming-content p {
+        font-size: 14px;
+    }
+
+    .coming-dots {
+        margin-top: 18px;
+    }
+
+    .coming-message {
+        margin-top: 12px;
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

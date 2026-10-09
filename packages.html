@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="VibeRoomz - Karaoke and Party Room Rental">
+    <meta name="keywords" content="karaoke rooms, party rooms, birthday parties, private rooms, VibeRoomz">
+    <meta name="author" content="VibeRoomz">
+
+    <title>VibeRoomz | Karaoke & Party Room Rental</title>
+<link
+        rel="icon"
+        type="image/png"
+        href="logo_dark.png"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="packages.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <div class="logo">
+
+                <a
+                    href="index.html"
+                    class="logo-icon-link"
+                    aria-label="VibeRoomz Home"
+                >
+                    <img
+                        src="logo_light.png"
+                        alt="VibeRoomz Logo"
+                        class="brand-logo"
+                        id="headerLogo"
+                    >
+                </a>
+
+                <span class="logo-divider"></span>
+
+                <a href="index.html" class="brand-content">
+
+                    <h1 class="brand-name">
+                        <span class="vibe">VIBE</span><span class="roomz">ROOMZ</span>
+                    </h1>
+
+                    <span class="subtitle-text">
+                        KARAOKE &amp; PARTY ROOM RENTAL
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav
+                class="navbar"
+                id="mainNavbar"
+                aria-label="Main navigation"
+            >
+
+                <ul class="nav-links" id="navLinks">
+
+                    <li class="dropdown">
+
+                        <a
+                            href="#"
+                            class="dropdown-trigger"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                        >
+                            <span>Home</span>
+                            <i data-lucide="chevron-down"></i>
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a href="index.html">Home 1</a>
+                            </li>
+
+                            <li>
+                                <a href="home2.html">Home 2</a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <li>
+                        <a href="rooms.html">Rooms</a>
+                    </li>
+
+                    <li>
+                        <a href="packages.html">Packages &amp; Pricing</a>
+                    </li>
+
+                    <li>
+                        <a href="events.html">Events</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+
+                    <li>
+                        <a href="dashboard.html">Dashboard</a>
+                    </li>
+
+                </ul>
+
+
+                <!-- Mobile Actions -->
+
+                <div class="mobile-menu-actions">
+
+                    <a
+                        href="contact.html"
+                        class="btn-primary mobile-action-book"
+                    >
+                        Book
+                    </a>
+
+                    <a
+                        href="login.html"
+                        class="btn-login mobile-action-login"
+                    >
+                        Login
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <!-- Header Controls -->
+
+            <div class="buttons">
+
+                <button
+                    class="icon-btn rtl-btn"
+                    id="rtlToggle"
+                    type="button"
+                    title="RTL Mode"
+                    aria-label="Toggle RTL mode"
+                >
+                    <i data-lucide="arrow-left-right"></i>
+                </button>
+
+
+                <button
+                    class="icon-btn dark-btn"
+                    id="darkToggle"
+                    type="button"
+                    title="Dark Mode"
+                    aria-label="Toggle dark mode"
+                >
+                    <i data-lucide="moon"></i>
+                </button>
+
+
+                <a
+                    href="contact.html"
+                    class="btn-primary desktop-book"
+                >
+                    Book
+                </a>
+
+
+                <a
+                    href="login.html"
+                    class="btn-login desktop-login"
+                >
+                    Login
+                </a>
+
+
+                <button
+                    class="icon-btn menu-btn"
+                    id="menuToggle"
+                    type="button"
+                    title="Menu"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="mainNavbar"
+                >
+                    <i data-lucide="menu"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- Page content -->
+<section class="packages-hero" aria-labelledby="packagesHeroTitle">
+    <div class="packages-hero-overlay"></div>
+
+    <div class="packages-hero-container">
+        <div class="packages-hero-content">
+
+            <span class="packages-hero-label">
+                PACKAGES & PRICING
+            </span>
+
+            <h1 id="packagesHeroTitle">
+                Pick Your Party.
+                <span>Pick Your Package.</span>
+            </h1>
+
+            <p class="packages-hero-description">
+                Choose the package that fits your group, occasion and party vibe.
+            </p>
+
+            <div class="packages-hero-highlights">
+                <span>Flexible Packages</span>
+                <span>Party Add-ons</span>
+            </div>
+
+            <div class="packages-hero-actions">
+                <a
+                    href="packages.html"
+                    class="packages-hero-btn packages-hero-btn-primary"
+                >
+                    View Packages
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="packages-hero-btn packages-hero-btn-secondary"
+                >
+                    Check Availability
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="package-overview" aria-labelledby="packageOverviewTitle">
+
+    <div class="package-overview-container">
+
+        <div class="package-overview-heading">
+            <span class="package-overview-label">
+                PACKAGE OVERVIEW
+            </span>
+
+            <h2 id="packageOverviewTitle">
+                Everything You Need.
+                <span>One Perfect Party.</span>
+            </h2>
+
+            <p>
+                Enjoy a complete celebration experience with private room
+                time, comfortable capacity, food, drinks, entertainment
+                and flexible add-ons.
+            </p>
+        </div>
+
+        <div class="package-overview-layout">
+
+            <div class="package-overview-visual">
+
+                <img
+                    src="https://images.openai.com/static-rsc-4/MmzPpGeiRwbCrftnY7D14GYF0cku0d3yfUJo288-m3u_GXK1xZnvhnsLD0lj_NaFUDa3KJIxawy41v08g-P-imh2eW-V-O1UgYmnd8MxhdXfP3Cp-vdqZEg4qWzK_h9zYsCMpROKgC3LjqgXR2VtnHlsRT3-kr59tPotctID-DgIGd2_4l8l8zvlDKSstuur?purpose=fullsize"
+                    alt="Friends enjoying a private party experience"
+                >
+
+                <div class="package-overview-visual-overlay"></div>
+
+                <div class="package-overview-visual-content">
+                    <span>YOUR PACKAGE</span>
+
+                    <h3>
+                        Built For
+                        <strong>Better Nights.</strong>
+                    </h3>
+
+                    <p>
+                        Bring your people, choose your vibe and enjoy
+                        everything you need inside one private space.
+                    </p>
+                </div>
+
+                <div class="package-overview-visual-badge">
+                    <i data-lucide="sparkles"></i>
+                    <div>
+                        <strong>All-In-One Experience</strong>
+                        <span>Designed around your celebration</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="package-overview-features">
+
+                <article class="package-overview-card">
+                    <div class="package-overview-card-icon">
+                        <i data-lucide="clock-3"></i>
+                    </div>
+
+                    <div class="package-overview-card-content">
+                        <span>ROOM TIME</span>
+                        <h3>Up To 3 Hours</h3>
+                        <p>
+                            Enjoy private room time to sing, celebrate
+                            and relax with your group.
+                        </p>
+                    </div>
+
+                    <i
+                        class="package-overview-card-arrow"
+                        data-lucide="arrow-up-right"
+                    ></i>
+                </article>
+
+                <article class="package-overview-card">
+                    <div class="package-overview-card-icon">
+                        <i data-lucide="users-round"></i>
+                    </div>
+
+                    <div class="package-overview-card-content">
+                        <span>GUEST CAPACITY</span>
+                        <h3>Up To 10 Guests</h3>
+                        <p>
+                            A comfortable private space designed for
+                            your group and celebration.
+                        </p>
+                    </div>
+
+                    <i
+                        class="package-overview-card-arrow"
+                        data-lucide="arrow-up-right"
+                    ></i>
+                </article>
+
+                <article class="package-overview-card">
+                    <div class="package-overview-card-icon">
+                        <i data-lucide="utensils"></i>
+                    </div>
+
+                    <div class="package-overview-card-content">
+                        <span>FOOD</span>
+                        <h3>Party Food</h3>
+                        <p>
+                            Enjoy delicious snacks and party-friendly
+                            food options during your session.
+                        </p>
+                    </div>
+
+                    <i
+                        class="package-overview-card-arrow"
+                        data-lucide="arrow-up-right"
+                    ></i>
+                </article>
+
+                <article class="package-overview-card">
+                    <div class="package-overview-card-icon">
+                        <i data-lucide="glass-water"></i>
+                    </div>
+
+                    <div class="package-overview-card-content">
+                        <span>DRINKS</span>
+                        <h3>Refreshing Drinks</h3>
+                        <p>
+                            Keep everyone refreshed with drinks available
+                            throughout your celebration.
+                        </p>
+                    </div>
+
+                    <i
+                        class="package-overview-card-arrow"
+                        data-lucide="arrow-up-right"
+                    ></i>
+                </article>
+
+                <article class="package-overview-card">
+                    <div class="package-overview-card-icon">
+                        <i data-lucide="mic-2"></i>
+                    </div>
+
+                    <div class="package-overview-card-content">
+                        <span>ENTERTAINMENT</span>
+                        <h3>Karaoke & Music</h3>
+                        <p>
+                            Powerful sound, microphones and a huge song
+                            library keep the party going.
+                        </p>
+                    </div>
+
+                    <i
+                        class="package-overview-card-arrow"
+                        data-lucide="arrow-up-right"
+                    ></i>
+                </article>
+
+                <article class="package-overview-card">
+                    <div class="package-overview-card-icon">
+                        <i data-lucide="plus"></i>
+                    </div>
+
+                    <div class="package-overview-card-content">
+                        <span>ADD-ONS</span>
+                        <h3>Extra Experiences</h3>
+                        <p>
+                            Personalize your package with decorations,
+                            extra food, drinks and more.
+                        </p>
+                    </div>
+
+                    <i
+                        class="package-overview-card-arrow"
+                        data-lucide="arrow-up-right"
+                    ></i>
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="popular-packages" aria-labelledby="popularPackagesTitle">
+
+    <div class="popular-packages-container">
+
+        <div class="popular-packages-heading">
+            <span class="popular-packages-label">
+                POPULAR PACKAGES
+            </span>
+
+            <h2 id="popularPackagesTitle">
+                Choose Your
+                <span>Perfect Party Package.</span>
+            </h2>
+
+            <p>
+                Whether you're planning a small gathering or a full party night,
+                choose a package that matches your group, budget and vibe.
+            </p>
+        </div>
+
+        <div class="popular-packages-grid">
+
+            <article class="popular-package-card">
+
+                <div class="popular-package-top">
+                    <span class="popular-package-type">BASIC</span>
+
+                    <div class="popular-package-icon">
+                        <i data-lucide="music-2"></i>
+                    </div>
+
+                    <h3>Basic</h3>
+
+                    <p>
+                        A simple and fun package for smaller groups
+                        looking for a great karaoke experience.
+                    </p>
+                </div>
+
+                <div class="popular-package-price">
+                    <strong>₹1,999</strong>
+                    <span>/ 2 Hours</span>
+                </div>
+
+                <ul class="popular-package-features">
+                    <li>
+                        <i data-lucide="check"></i>
+                        Up to 6 Guests
+                    </li>
+                    <li>
+                        <i data-lucide="check"></i>
+                        Private Karaoke Room
+                    </li>
+                    <li>
+                        <i data-lucide="check"></i>
+                        Premium Sound System
+                    </li>
+                    <li>
+                        <i data-lucide="check"></i>
+                        LED Party Lighting
+                    </li>
+                </ul>
+
+                <a
+                    href="packages.html"
+                    class="popular-package-btn"
+                >
+                    Choose Basic
+                </a>
+
+            </article>
+
+
+            <article class="popular-package-card popular-package-card-featured">
+
+                <div class="popular-package-popular">
+                    <i data-lucide="sparkles"></i>
+                    MOST POPULAR
+                </div>
+
+                <div class="popular-package-top">
+                    <span class="popular-package-type">POPULAR</span>
+
+                    <div class="popular-package-icon">
+                        <i data-lucide="party-popper"></i>
+                    </div>
+
+                    <h3>Popular</h3>
+
+                    <p>
+                        Our favourite choice for birthdays, weekend parties
+                        and unforgettable group celebrations.
+                    </p>
+                </div>
+
+                <div class="popular-package-price">
+                    <strong>₹3,499</strong>
+                    <span>/ 3 Hours</span>
+                </div>
+
+                <ul class="popular-package-features">
+                    <li>
+                        <i data-lucide="check"></i>
+                        Up to 10 Guests
+                    </li>
+                    <li>
+                        <i data-lucide="check"></i>
+                        Premium Karaoke Room
+                    </li>
+                    <li>
+                        <i data-lucide="check"></i>
+                        Food & Refreshments
+                    </li>
+                    <li>
+                        <i data-lucide="check"></i>
+                        Dynamic Party Lighting
+                    </li>
+                    <li>
+                        <i data-lucide="check"></i>
+                        Wireless Microphones
+                    </li>
+                </ul>
+
+                <a
+                    href="packages.html"
+                    class="popular-package-btn popular-package-btn-featured"
+                >
+                    Choose Popular
+                </a>
+
+            </article>
+
+
+            <article class="popular-package-card">
+
+                <div class="popular-package-top">
+                    <span class="popular-package-type">PREMIUM</span>
+
+                    <div class="popular-package-icon">
+                        <i data-lucide="crown"></i>
+                    </div>
+
+                    <h3>Premium</h3>
+
+                    <p>
+                        A premium party experience with extra comfort,
+                        entertainment and special add-ons.
+                    </p>
+                </div>
+
+                <div class="popular-package-price">
+                    <strong>₹5,499</strong>
+                    <span>/ 4 Hours</span>
+                </div>
+
+                <ul class="popular-package-features">
+                    <li>
+                        <i data-lucide="check"></i>
+                        Up to 15 Guests
+                    </li>
+                    <li>
+                        <i data-lucide="check"></i>
+                        Premium Party Room
+                    </li>
+                    <li>
+                        <i data-lucide="check"></i>
+                        Food & Drinks
+                    </li>
+                    <li>
+                        <i data-lucide="check"></i>
+                        Premium Sound & Lighting
+                    </li>
+                    <li>
+                        <i data-lucide="check"></i>
+                        Flexible Add-ons
+                    </li>
+                </ul>
+
+                <a
+                    href="packages.html"
+                    class="popular-package-btn"
+                >
+                    Choose Premium
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="birthday-packages" aria-labelledby="birthdayPackagesTitle">
+
+    <div class="birthday-packages-container">
+
+        <div class="birthday-packages-heading">
+            <span class="birthday-packages-label">
+                BIRTHDAY PACKAGES
+            </span>
+
+            <h2 id="birthdayPackagesTitle">
+                Make Their Birthday
+                <span>One To Remember.</span>
+            </h2>
+
+            <p>
+                Celebrate with dedicated birthday experiences designed with
+                decorations, delicious food, refreshing drinks, music and
+                memorable photo moments.
+            </p>
+        </div>
+
+        <div class="birthday-packages-grid">
+
+            <article class="birthday-package-card">
+                <div class="birthday-package-image">
+                    <img
+                        src="https://images.openai.com/static-rsc-4/sGFSaMCEoKZJE06DJLvfHNZuz9V4m_40vhGjEAOZiPJrnZUECZRFkw5FQq_uRyiTXXiOV7oewcHHiLE5suVsp2BE2rD7z3wAMTeatYLFRPKqeW13b-9Sz3BaBVaNXAc4cME07PZwVJtzQNZA2J1c7wbF1lqIwKf91g9psGpLUiE-QNcywoTCZinJ9QOmGElD?purpose=fullsize"
+                        alt="Birthday room decoration"
+                    >
+                    <div class="birthday-package-overlay"></div>
+
+                    <div class="birthday-package-content">
+                        <span>01</span>
+                        <div>
+                            <h3>Room Decoration</h3>
+                            <p>
+                                Turn your private room into a colourful
+                                birthday celebration space.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="birthday-package-card">
+                <div class="birthday-package-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=90"
+                        alt="Birthday cake celebration"
+                    >
+                    <div class="birthday-package-overlay"></div>
+
+                    <div class="birthday-package-content">
+                        <span>02</span>
+                        <div>
+                            <h3>Cake Options</h3>
+                            <p>
+                                Choose a delicious birthday cake that
+                                completes the celebration.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="birthday-package-card">
+                <div class="birthday-package-image">
+                    <img
+                        src="https://images.openai.com/static-rsc-4/cgyAvRVNuYrBz5rxmcgAjzV4LCbc2cLPpb3VQI4p5s0q9IM3yVotprm1L701JVPuy8Lwbr4lLnNI-J_TxJblaUBWi8aX4xNyIGRku6rRSgyiBXObEHVg23Fb6F8S2KNo7PboPJxknrI0k7jx1qz8vdi9SAacWzDWYDPN8C7osTku8LaXl15_5LCyio7qa0wQ?purpose=fullsize"
+                        alt="Party food and snacks"
+                    >
+                    <div class="birthday-package-overlay"></div>
+
+                    <div class="birthday-package-content">
+                        <span>03</span>
+                        <div>
+                            <h3>Party Food</h3>
+                            <p>
+                                Enjoy tasty party food and snacks made
+                                for sharing with your guests.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="birthday-package-card">
+                <div class="birthday-package-image">
+                    <img
+                        src="https://images.openai.com/static-rsc-4/1gEkT6yXUHUDLlsxiWRdQ5QjbUDLGAncUZA74HtFh9ZqithjMjvTYqW9lcTidI2d-mX4Wlq608199XKzfAVxQzaDX_WYFfAmxTc1Gl1nQ13PB4qH4UkHDB_o83GPFtR5ptD1ed_2RZC44W204Ob1MC4hSg_aEUSymR0yN1kRh5Z_Q3isnvEpe7i5qboPWyTk?purpose=fullsize"
+                        alt="Refreshing party drinks"
+                    >
+                    <div class="birthday-package-overlay"></div>
+
+                    <div class="birthday-package-content">
+                        <span>04</span>
+                        <div>
+                            <h3>Drinks</h3>
+                            <p>
+                                Keep the celebration fresh with refreshing
+                                drinks for everyone.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="birthday-package-card">
+                <div class="birthday-package-image">
+                    <img
+                        src="https://images.openai.com/static-rsc-4/M2xBf8hvRBhfYGZCid3oeyEO83lAPwl6kAthBDZstfQwnHy2cW_HRGTOvCw1b2JtOJcscTwlpDJN-ghJ6EB94H1oAz1JxRAEkjAx-YS8tzdFYmBbyVCIk3paWmyicmetKOs6xx_xouAKbhnueV7NhMNPmQqUWyNZr7_ByywuapDvAa-e5m-bTx2Fpl5y3pHx?purpose=fullsize"
+                        alt="Music and birthday party"
+                    >
+                    <div class="birthday-package-overlay"></div>
+
+                    <div class="birthday-package-content">
+                        <span>05</span>
+                        <div>
+                            <h3>Music</h3>
+                            <p>
+                                Sing, dance and celebrate with karaoke,
+                                music and party vibes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="birthday-package-card">
+                <div class="birthday-package-image">
+                    <img
+                        src="https://images.openai.com/static-rsc-4/JikhqNOa2vJumFxSgfbIk9i2pQvDC659tWPKdRuaHP3VDGLuLKqRO01rV6O9p6GvRfLrsaLIuWcpZ4w04I3R5vP2ZsXG7YXcmKua2ABrBQtz5u_qxFcoIywPJwTUkuj4TjKwV5xkGHuIbBTmFWhRHvgrV700LLByKZz5pl4vUL8iGT3UZRMrdhMtwS56yZyO?purpose=fullsize"
+                        alt="Friends taking birthday photos"
+                    >
+                    <div class="birthday-package-overlay"></div>
+
+                    <div class="birthday-package-content">
+                        <span>06</span>
+                        <div>
+                            <h3>Photo Moments</h3>
+                            <p>
+                                Capture the smiles, celebrations and
+                                unforgettable birthday memories.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="group-corporate-packages" aria-labelledby="groupCorporatePackagesTitle">
+
+    <div class="group-corporate-packages-container">
+
+        <div class="group-corporate-packages-heading">
+            <span class="group-corporate-packages-label">
+                GROUP & CORPORATE PACKAGES
+            </span>
+
+            <h2 id="groupCorporatePackagesTitle">
+                Bring Everyone
+                <span>Together.</span>
+            </h2>
+
+            <p>
+                From team celebrations and office parties to college groups
+                and large gatherings, create an experience everyone can enjoy.
+            </p>
+        </div>
+
+        <div class="group-corporate-packages-grid">
+
+            <article class="group-corporate-package-card">
+                <div class="group-corporate-package-image">
+
+                    <img
+                        src="https://images.openai.com/static-rsc-4/R2dV6DAeTFJgvDvulyY1R82zkj8VDHQfpWWfo4Vh9eIH41AQyV0jZiji0uIcmpGdaJKQNHvFK_Qlxp3RZThHfx36Yyw84PvKHMJtNqqtBWmLEAW34NJBdBVzdRFvLqpItp1q8LQPQwZO7NSoa975l5K7vyTVs0o6qai70ur0lEqFmWayjGfickQItWkUWqJQ?purpose=fullsize"
+                        alt="Team event celebration"
+                    >
+
+                    <div class="group-corporate-package-overlay"></div>
+
+                    <div class="group-corporate-package-content">
+                        <span>01</span>
+                        <h3>Team Events</h3>
+                        <p>
+                            Bring your team together for a fun,
+                            relaxed and memorable experience.
+                        </p>
+                    </div>
+
+                </div>
+            </article>
+
+            <article class="group-corporate-package-card">
+                <div class="group-corporate-package-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=900&q=90"
+                        alt="Office party celebration"
+                    >
+
+                    <div class="group-corporate-package-overlay"></div>
+
+                    <div class="group-corporate-package-content">
+                        <span>02</span>
+                        <h3>Office Parties</h3>
+                        <p>
+                            Celebrate milestones, achievements
+                            and team moments outside the office.
+                        </p>
+                    </div>
+
+                </div>
+            </article>
+
+            <article class="group-corporate-package-card">
+                <div class="group-corporate-package-image">
+
+                    <img
+                        src="https://images.openai.com/static-rsc-4/O-W6kYLOQLUjBRVGTspBtNDh9vyeWEE29kSgVKHlOIFpk3oStHJzArfDltyjb4Lra2FbjZ98AGcRsXopIhlySFWMu4_PlaWjTYpEbGSayZxWJczJjVT0R0wIKaxsBBzcde3mW4Ap0AllkZCmeHvybrseqxVl2cmBBxiP9ywdMhh7rCtXgBRiwDbvXWn8kAym?purpose=fullsize"
+                        alt="College group having fun"
+                    >
+
+                    <div class="group-corporate-package-overlay"></div>
+
+                    <div class="group-corporate-package-content">
+                        <span>03</span>
+                        <h3>College Groups</h3>
+                        <p>
+                            Give your college crew the perfect space
+                            for music, fun and group celebrations.
+                        </p>
+                    </div>
+
+                </div>
+            </article>
+
+            <article class="group-corporate-package-card">
+                <div class="group-corporate-package-image">
+
+                    <img
+                        src="https://images.openai.com/static-rsc-4/rrYcvQhpxUPYYkr1cAzv_FCaEw41NRcOSCm45GD71E-ZSlDeHNX5QxGmfoWcacD1MAWTASB6zxlcGOYJqdcTtmssVNstpDdXmuaSWwDs7kYyIGyL3DKRxeWuV8QugLpb5D8oIz79BFy4FtiPpm0i8gx4t46Hz535AgFfeCyXEr1AJrPrk3DhnniEM11wgIv3?purpose=fullsize"
+                        alt="Large group celebration"
+                    >
+
+                    <div class="group-corporate-package-overlay"></div>
+
+                    <div class="group-corporate-package-content">
+                        <span>04</span>
+                        <h3>Large Gatherings</h3>
+                        <p>
+                            Spacious party experiences designed for
+                            bigger groups and special occasions.
+                        </p>
+                    </div>
+
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="package-addons" aria-labelledby="packageAddonsTitle">
+
+    <div class="package-addons-container">
+
+        <div class="package-addons-heading">
+            <span class="package-addons-label">
+                ADD-ONS
+            </span>
+
+            <h2 id="packageAddonsTitle">
+                Make Your Party
+                <span>Even Better.</span>
+            </h2>
+
+            <p>
+                Personalize your package with flexible extras designed to
+                make your celebration more comfortable, exciting and memorable.
+            </p>
+        </div>
+
+        <div class="package-addons-grid">
+
+            <article class="package-addon-card">
+                <div class="package-addon-icon">
+                    <i data-lucide="clock-3"></i>
+                </div>
+
+                <div class="package-addon-content">
+                    <span>01</span>
+                    <h3>Extra Hour</h3>
+                    <p>
+                        Need more time? Extend your private room session
+                        and keep the celebration going.
+                    </p>
+                </div>
+
+                <i
+                    class="package-addon-arrow"
+                    data-lucide="arrow-up-right"
+                ></i>
+            </article>
+
+
+            <article class="package-addon-card">
+                <div class="package-addon-icon">
+                    <i data-lucide="utensils"></i>
+                </div>
+
+                <div class="package-addon-content">
+                    <span>02</span>
+                    <h3>Food Platter</h3>
+                    <p>
+                        Add delicious party platters and sharing snacks
+                        for your entire group.
+                    </p>
+                </div>
+
+                <i
+                    class="package-addon-arrow"
+                    data-lucide="arrow-up-right"
+                ></i>
+            </article>
+
+
+            <article class="package-addon-card">
+                <div class="package-addon-icon">
+                    <i data-lucide="glass-water"></i>
+                </div>
+
+                <div class="package-addon-content">
+                    <span>03</span>
+                    <h3>Mocktail Package</h3>
+                    <p>
+                        Keep your guests refreshed with colourful and
+                        refreshing mocktail options.
+                    </p>
+                </div>
+
+                <i
+                    class="package-addon-arrow"
+                    data-lucide="arrow-up-right"
+                ></i>
+            </article>
+
+
+            <article class="package-addon-card">
+                <div class="package-addon-icon">
+                    <i data-lucide="party-popper"></i>
+                </div>
+
+                <div class="package-addon-content">
+                    <span>04</span>
+                    <h3>Decorations</h3>
+                    <p>
+                        Add balloons, themed decorations and special
+                        touches that match your celebration.
+                    </p>
+                </div>
+
+                <i
+                    class="package-addon-arrow"
+                    data-lucide="arrow-up-right"
+                ></i>
+            </article>
+
+
+            <article class="package-addon-card">
+                <div class="package-addon-icon">
+                    <i data-lucide="cake-slice"></i>
+                </div>
+
+                <div class="package-addon-content">
+                    <span>05</span>
+                    <h3>Birthday Cake</h3>
+                    <p>
+                        Complete your celebration with a delicious cake
+                        selected for your special occasion.
+                    </p>
+                </div>
+
+                <i
+                    class="package-addon-arrow"
+                    data-lucide="arrow-up-right"
+                ></i>
+            </article>
+
+
+            <article class="package-addon-card">
+                <div class="package-addon-icon">
+                    <i data-lucide="camera"></i>
+                </div>
+
+                <div class="package-addon-content">
+                    <span>06</span>
+                    <h3>Photography</h3>
+                    <p>
+                        Capture the best moments of your party with
+                        memorable celebration photography.
+                    </p>
+                </div>
+
+                <i
+                    class="package-addon-arrow"
+                    data-lucide="arrow-up-right"
+                ></i>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="package-comparison" aria-labelledby="packageComparisonTitle">
+
+    <div class="package-comparison-container">
+
+        <div class="package-comparison-heading">
+            <span class="package-comparison-label">
+                PACKAGE COMPARISON
+            </span>
+
+            <h2 id="packageComparisonTitle">
+                Compare Packages.
+                <span>Choose With Confidence.</span>
+            </h2>
+
+            <p>
+                Compare the key features, room time, capacity and experiences
+                included in each package to find the right fit for your party.
+            </p>
+        </div>
+
+        <div class="package-comparison-table-wrap">
+
+            <table class="package-comparison-table">
+
+                <thead>
+                    <tr>
+                        <th scope="col">Feature</th>
+
+                        <th scope="col">
+                            <span>STARTER</span>
+                            <strong>₹1,999</strong>
+                        </th>
+
+                        <th scope="col" class="package-comparison-popular">
+                            <div class="package-comparison-badge">
+                                MOST POPULAR
+                            </div>
+                            <span>PARTY</span>
+                            <strong>₹3,499</strong>
+                        </th>
+
+                        <th scope="col">
+                            <span>PREMIUM</span>
+                            <strong>₹5,499</strong>
+                        </th>
+
+                        <th scope="col">
+                            <span>VIP</span>
+                            <strong>₹7,999</strong>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <th scope="row">Room Time</th>
+                        <td>2 Hours</td>
+                        <td class="package-comparison-popular">3 Hours</td>
+                        <td>4 Hours</td>
+                        <td>5 Hours</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Guest Capacity</th>
+                        <td>Up to 6</td>
+                        <td class="package-comparison-popular">Up to 10</td>
+                        <td>Up to 15</td>
+                        <td>Up to 25</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Private Room</th>
+                        <td><i data-lucide="check"></i></td>
+                        <td class="package-comparison-popular">
+                            <i data-lucide="check"></i>
+                        </td>
+                        <td><i data-lucide="check"></i></td>
+                        <td><i data-lucide="check"></i></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Karaoke System</th>
+                        <td><i data-lucide="check"></i></td>
+                        <td class="package-comparison-popular">
+                            <i data-lucide="check"></i>
+                        </td>
+                        <td><i data-lucide="check"></i></td>
+                        <td><i data-lucide="check"></i></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Premium Sound</th>
+                        <td><i data-lucide="minus"></i></td>
+                        <td class="package-comparison-popular">
+                            <i data-lucide="check"></i>
+                        </td>
+                        <td><i data-lucide="check"></i></td>
+                        <td><i data-lucide="check"></i></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Party Lighting</th>
+                        <td>Basic</td>
+                        <td class="package-comparison-popular">Dynamic</td>
+                        <td>Premium</td>
+                        <td>VIP Lighting</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Food</th>
+                        <td><i data-lucide="minus"></i></td>
+                        <td class="package-comparison-popular">
+                            <i data-lucide="check"></i>
+                        </td>
+                        <td><i data-lucide="check"></i></td>
+                        <td><i data-lucide="check"></i></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Drinks</th>
+                        <td><i data-lucide="minus"></i></td>
+                        <td class="package-comparison-popular">
+                            <i data-lucide="check"></i>
+                        </td>
+                        <td><i data-lucide="check"></i></td>
+                        <td><i data-lucide="check"></i></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Add-ons</th>
+                        <td>Optional</td>
+                        <td class="package-comparison-popular">Included</td>
+                        <td>Included</td>
+                        <td>Premium Add-ons</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Wireless Microphones</th>
+                        <td><i data-lucide="minus"></i></td>
+                        <td class="package-comparison-popular">
+                            <i data-lucide="check"></i>
+                        </td>
+                        <td><i data-lucide="check"></i></td>
+                        <td><i data-lucide="check"></i></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Best For</th>
+                        <td>Small Groups</td>
+                        <td class="package-comparison-popular">Birthdays</td>
+                        <td>Large Parties</td>
+                        <td>VIP Events</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="packages-cta" aria-labelledby="packagesCtaTitle">
+    <div class="packages-cta-container">
+
+        <div class="packages-cta-card">
+
+            <div class="packages-cta-content">
+                <span class="packages-cta-label">PRICING</span>
+
+                <h2 id="packagesCtaTitle">
+                    Choose Your Package.
+                    <span>Start Your Party.</span>
+                </h2>
+
+                <p>
+                    Find the package that fits your group and celebration,
+                    then get ready to create your perfect party experience.
+                </p>
+            </div>
+
+            <div class="packages-cta-actions">
+                <a href="packages.html"
+                   class="packages-cta-btn packages-cta-btn-primary">
+                    View Packages
+                </a>
+
+                <a href="contact.html"
+                   class="packages-cta-btn packages-cta-btn-secondary">
+                    Book Now
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-top">
+
+
+                <!-- Footer Brand -->
+
+                <div class="footer-brand">
+
+                    <div class="footer-brand-row">
+
+                        <a
+                            href="index.html"
+                            class="footer-logo-link"
+                            aria-label="VibeRoomz Home"
+                        >
+                            <img
+                                src="./images/logo_light.png"
+                                alt="VibeRoomz Logo"
+                                class="footer-logo"
+                                id="footerLogo"
+                            >
+                        </a>
+
+                        <span class="footer-logo-divider"></span>
+
+                        <a
+                            href="index.html"
+                            class="footer-brand-content"
+                        >
+
+                            <h2 class="footer-brand-name">
+                                <span class="vibe">VIBE</span><span class="roomz">ROOMZ</span>
+                            </h2>
+
+                            <span class="footer-subtitle">
+                                KARAOKE &amp; PARTY ROOM RENTAL
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <p class="footer-description">
+                        VibeRoomz brings music, celebration, food, and entertainment
+                        together in private karaoke and party rooms designed for
+                        birthdays, group celebrations, events, and unforgettable nights.
+                    </p>
+
+
+                    <div class="footer-social">
+
+                        <a
+                            href="#"
+                            class="social-btn"
+                            aria-label="Instagram"
+                        >
+                            <i data-lucide="instagram"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            class="social-btn"
+                            aria-label="Facebook"
+                        >
+                            <i data-lucide="facebook"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            class="social-btn"
+                            aria-label="YouTube"
+                        >
+                            <i data-lucide="youtube"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            class="social-btn"
+                            aria-label="LinkedIn"
+                        >
+                            <i data-lucide="linkedin"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Quick Links -->
+
+                <div class="footer-column">
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="rooms.html">Rooms</a>
+                        </li>
+
+                        <li>
+                            <a href="packages.html">
+                                Packages &amp; Pricing
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="events.html">Events</a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Party Rooms -->
+
+                <div class="footer-column">
+
+                    <h3>Party Rooms</h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="rooms.html">Mini Rooms</a>
+                        </li>
+
+                        <li>
+                            <a href="rooms.html">Classic Rooms</a>
+                        </li>
+
+                        <li>
+                            <a href="rooms.html">Party Rooms</a>
+                        </li>
+
+                        <li>
+                            <a href="rooms.html">Premium Rooms</a>
+                        </li>
+
+                        <li>
+                            <a href="rooms.html">VIP Rooms</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Additional Pages -->
+
+                <div class="footer-column">
+
+                    <h3>Additional Pages</h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="error.html">404</a>
+                        </li>
+
+                        <li>
+                            <a href="soon.html">
+                                Coming Soon
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">Support</a>
+                        </li>
+
+                        <li>
+                            <a href="dashboard.html">
+                                Dashboard
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Contact -->
+
+                <div class="footer-column footer-contact">
+
+                    <h3>Contact Us</h3>
+
+                    <ul>
+
+                        <li>
+                            <i data-lucide="map-pin"></i>
+                            <span>Hyderabad, Telangana</span>
+                        </li>
+
+                        <li>
+                            <i data-lucide="phone"></i>
+                            <a href="tel:+919876543210">
+                                +91 98765 43210
+                            </a>
+                        </li>
+
+                        <li>
+                            <i data-lucide="mail"></i>
+                            <a href="mailto:hello@viberoomz.com">
+                                hello@viberoomz.com
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        href="contact.html"
+                        class="footer-cta"
+                    >
+                        Enquire Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer Bottom -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 VibeRoomz. All Rights Reserved.
+                </p>
+
+                <div class="footer-bottom-links">
+
+                    <a href="policy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="conditions.html">
+                        Terms &amp; Conditions
+                    </a>
+
+                    <!-- Back to top is now normal link -->
+
+                    <a
+                        href="#"
+                        id="backToTop"
+                    >
+                        Back to top
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+
+    <script src="main.js"></script>
+
+    <script src="packages.js"></script>
+
+</body>
+</html>

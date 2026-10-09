@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="VibeRoomz customer dashboard"
+    >
+
+    <title>Dashboard</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="logo_light.png"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="main.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    >
+
+    <script>
+        (() => {
+            try {
+                const savedTheme =
+                    localStorage.getItem("theme");
+
+                const savedDirection =
+                    localStorage.getItem("direction");
+
+                document.documentElement.dir =
+                    savedDirection === "rtl"
+                        ? "rtl"
+                        : "ltr";
+
+                document.documentElement.dataset.theme =
+                    savedTheme === "dark"
+                        ? "dark"
+                        : "light";
+            } catch (error) {
+                document.documentElement.dir = "ltr";
+                document.documentElement.dataset.theme = "light";
+            }
+        })();
+    </script>
+</head>
+
+<body>
+
+    <div
+        class="mobile-overlay"
+        id="mobileOverlay"
+        aria-hidden="true"
+    ></div>
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+        aria-label="Dashboard sidebar"
+    >
+
+        <div class="logo-wrap">
+
+            <a
+                href="index.html"
+                class="dashboard-logo"
+                aria-label="VibeRoomz Home"
+            >
+
+                <img
+                    src="logo_light.png"
+                    alt="VibeRoomz Logo"
+                    id="siteLogo"
+                    data-light-logo="logo_light.png"
+                    data-dark-logo="logo_dark.png"
+                >
+
+                <span class="dashboard-logo-divider"></span>
+
+                <span class="dashboard-logo-content">
+
+                    <strong class="dashboard-logo-name">
+                        <span class="vibe">VIBE</span><span class="roomz">ROOMZ</span>
+                    </strong>
+
+                    <small>
+                        KARAOKE &amp; PARTY ROOM RENTAL
+                    </small>
+
+                </span>
+
+            </a>
+
+        </div>
+
+        <nav
+            class="sidebar-nav"
+            aria-label="Dashboard sections"
+        >
+
+            <button
+                type="button"
+                class="menu-link active"
+                data-section="dashboard"
+            >
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </button>
+
+            <button
+                type="button"
+                class="menu-link"
+                data-section="bookings"
+            >
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>My Bookings</span>
+            </button>
+
+            <button
+                type="button"
+                class="menu-link"
+                data-section="rooms"
+            >
+                <i class="fa-solid fa-door-open"></i>
+                <span>Explore Rooms</span>
+            </button>
+
+            <button
+                type="button"
+                class="menu-link"
+                data-section="packages"
+            >
+                <i class="fa-solid fa-box-open"></i>
+                <span>Packages</span>
+            </button>
+
+            <button
+                type="button"
+                class="menu-link"
+                data-section="events"
+            >
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Events</span>
+            </button>
+
+            <button
+                type="button"
+                class="menu-link"
+                data-section="payments"
+            >
+                <i class="fa-solid fa-credit-card"></i>
+                <span>Payments</span>
+            </button>
+
+            <button
+                type="button"
+                class="menu-link"
+                data-section="profile"
+            >
+                <i class="fa-solid fa-user"></i>
+                <span>My Profile</span>
+            </button>
+
+            <button
+                type="button"
+                class="menu-link logout-link"
+                id="logoutBtn"
+            >
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </button>
+
+        </nav>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    type="button"
+                    class="icon-btn menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="sidebar"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h1 id="topTitle">
+                        Welcome back, Chandra Shekar
+                    </h1>
+
+                    <p id="topSubtitle">
+                        Ready to plan your next party night?
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <button
+                    type="button"
+                    class="icon-btn"
+                    id="rtlToggle"
+                    aria-label="Switch to right-to-left layout"
+                    aria-pressed="false"
+                    title="Toggle RTL mode"
+                >
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </button>
+
+                <button
+                    type="button"
+                    class="icon-btn"
+                    id="themeToggle"
+                    aria-label="Switch to dark mode"
+                    aria-pressed="false"
+                    title="Toggle dark mode"
+                >
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button
+                    type="button"
+                    class="notification"
+                    aria-label="Notifications"
+                >
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+
+                <div
+                    class="profile-dropdown"
+                    id="profileDropdown"
+                >
+
+                    <button
+                        type="button"
+                        class="profile-box"
+                        id="profileTrigger"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                    >
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=12"
+                            alt="Chandra Shekar profile"
+                        >
+
+                        <span>
+                            <strong>Chandra Shekar</strong>
+                            <small>Customer</small>
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+                    <div
+                        class="profile-menu"
+                        role="menu"
+                    >
+
+                        <button
+                            type="button"
+                            data-profile-section="profile"
+                            role="menuitem"
+                        >
+                            <i class="fa-solid fa-user"></i>
+                            <span>My Profile</span>
+                        </button>
+
+                        <button
+                            type="button"
+                            id="profileLogout"
+                            role="menuitem"
+                        >
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Logout</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <section
+            class="content-section active-section"
+            id="dashboard"
+        >
+
+            <div class="welcome-card">
+
+                <div class="welcome-content">
+
+                    <span class="welcome-label">
+                        WELCOME TO VIBEROOMZ
+                    </span>
+
+                    <h2>
+                        Make your next night
+                        <span>unforgettable.</span>
+                    </h2>
+
+                    <p>
+                        Discover private karaoke rooms, party packages
+                        and exciting events designed for your best moments.
+                    </p>
+
+                </div>
+
+                <div class="welcome-next">
+
+                    <small>NEXT RESERVATION</small>
+
+                    <strong>Premium Party Room</strong>
+
+                    <span>
+                        <i class="fa-solid fa-calendar"></i>
+                        28 September 2026
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-clock"></i>
+                        7:00 PM - 10:00 PM
+                    </span>
+
+                    <button
+                        type="button"
+                        class="welcome-btn"
+                        data-target="bookings"
+                    >
+                        View Booking
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="section-heading">
+                <span>YOUR OVERVIEW</span>
+                <h2>Dashboard Summary</h2>
+            </div>
+
+            <div class="stats-grid">
+
+                <article class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+
+                    <div>
+                        <strong>12</strong>
+                        <p>Total Bookings</p>
+                    </div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-door-open"></i>
+                    </div>
+
+                    <div>
+                        <strong>4</strong>
+                        <p>Upcoming Visits</p>
+                    </div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+
+                    <div>
+                        <strong>₹18,500</strong>
+                        <p>Total Spent</p>
+                    </div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+
+                    <div>
+                        <strong>06</strong>
+                        <p>Rewards Earned</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="dashboard-grid">
+
+                <article class="dashboard-panel next-reservation">
+
+                    <div class="panel-heading">
+                        <div>
+                            <span>NEXT VISIT</span>
+                            <h3>Upcoming Reservation</h3>
+                        </div>
+
+                        <span class="status upcoming">
+                            Confirmed
+                        </span>
+                    </div>
+
+                    <div class="reservation-body">
+
+                        <div class="reservation-room">
+
+                            <img
+                                src="https://images.openai.com/static-rsc-4/fFnGxQaM9qlw-hwEl9Eqc_hGj8POAJKcmYXoSTc3wE7cCCWB221mKok3bOW2jykLsUnfQv9id8mLuAvkwBOm7iN5NFBmyrt5GXe-hJpVcU-_Qm_5pcJcQt5kG4ZW6Vvh6Y9geZpHYoHxVI-KdEsKjXpQAUaZRsYJ8ErndVKfhqr7_iDxMf2cI4yHSzXl5BzQ?purpose=fullsize"
+                                alt="Premium party room"
+                            >
+
+                            <div>
+                                <strong>Premium Party Room</strong>
+                                <p>Birthday Celebration Package</p>
+                            </div>
+
+                        </div>
+
+                        <div class="reservation-details">
+
+                            <div>
+                                <i class="fa-solid fa-calendar"></i>
+                                <span>
+                                    <small>Date</small>
+                                    28 Sep 2026
+                                </span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-clock"></i>
+                                <span>
+                                    <small>Time</small>
+                                    7:00 PM
+                                </span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-users"></i>
+                                <span>
+                                    <small>Guests</small>
+                                    12 People
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="primary-btn"
+                            data-target="bookings"
+                        >
+                            View Reservation
+                        </button>
+
+                    </div>
+
+                </article>
+
+                <article class="dashboard-panel payment-mini">
+
+                    <div class="panel-heading">
+                        <div>
+                            <span>PAYMENTS</span>
+                            <h3>Payment Summary</h3>
+                        </div>
+
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+
+                    <div class="payment-main">
+
+                        <div class="payment-total">
+                            <small>Total Spent</small>
+                            <strong>₹18,500</strong>
+                        </div>
+
+                        <div class="payment-line">
+                            <span>Completed</span>
+                            <strong>₹15,200</strong>
+                        </div>
+
+                        <div class="payment-line">
+                            <span>Pending</span>
+                            <strong>₹3,300</strong>
+                        </div>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        data-target="payments"
+                    >
+                        View Payments
+                    </button>
+
+                </article>
+
+            </div>
+
+            <article class="dashboard-panel full-panel">
+
+                <div class="panel-heading">
+                    <div>
+                        <span>RECOMMENDED</span>
+                        <h3>Rooms You May Like</h3>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="text-btn"
+                        data-target="rooms"
+                    >
+                        View All
+                    </button>
+                </div>
+
+                <div class="recommended-grid">
+
+                    <article class="recommended-card">
+
+                        <img
+                            src="https://images.openai.com/static-rsc-4/fsRqDHlBPmXx63yH-PEk1sUDd1ODz4HCMiC3iqCT5IhOCmvxtRosvsn6GLdleA2EaLPiJXi30ebTncrJUXO8TcBNM3U2uSiVB1hKfDmZ0i5wmRIVWt_VgWyGAeQQuDXY728rG9CIsoFSDuhldRVrVhYp784unYl9KxFE6M2H4flQ64gpJqkO9iGE2wQldb8p?purpose=fullsize"
+                            alt="Classic karaoke room"
+                        >
+
+                        <div class="recommended-content">
+                            <span>CLASSIC</span>
+                            <h4>Classic Karaoke Room</h4>
+                            <p>Perfect for small groups and casual nights.</p>
+                            <strong>From ₹1,499 / hour</strong>
+                        </div>
+
+                    </article>
+
+                    <article class="recommended-card">
+
+                        <img
+                            src="https://images.openai.com/static-rsc-4/DN6IswTxUBu1Y38xnUhGUtPRlcBMPglA0o9SRa_wVK2D1f0e0L2E7aPHO-HO0ZhuKuWOE26YCEufrtLJbOT4ZRcXAJX3p7k6A7mvnPd1b3PnP6T3UTiHnefd79vAGPpG1EqdvBdh6P-X04CIqj-jC_b74GID45-mebpP4CLp_EpQ8ppCvCWDS8lep-MlnPdv?purpose=fullsize"
+                            alt="Party room"
+                        >
+
+                        <div class="recommended-content">
+                            <span>POPULAR</span>
+                            <h4>Party Room</h4>
+                            <p>More space, more music and more memories.</p>
+                            <strong>From ₹2,499 / hour</strong>
+                        </div>
+
+                    </article>
+
+                    <article class="recommended-card">
+
+                        <img
+                            src="https://images.openai.com/static-rsc-4/vN1EmRV-XPxBYqjxrag4MTpGlCHu5WRKBte7opHTyVjcwoVmJHrol2pg-kz1AnyJC9XKS2L_dESKCe4TsYElRYO_sjUMa6QDAT9cvdZ6Msv_90CKM3qSExnAf1kKGoU0rhnOGVq0V1sWfO765CYJW2MQpNdfi1BdYyvoThaiQmRkR8nVV4k0KM2Az7PxF4H0?purpose=fullsize"
+                            alt="VIP karaoke room"
+                        >
+
+                        <div class="recommended-content">
+                            <span>PREMIUM</span>
+                            <h4>VIP Karaoke Room</h4>
+                            <p>A premium experience for special celebrations.</p>
+                            <strong>From ₹3,999 / hour</strong>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <section
+            class="content-section"
+            id="bookings"
+        >
+
+            <div class="section-header">
+                <span>RESERVATIONS</span>
+                <h2>My Bookings</h2>
+                <p>Track your VibeRoomz reservations.</p>
+            </div>
+
+            <article class="dashboard-panel">
+
+                <div class="panel-heading">
+                    <div>
+                        <span>BOOKING HISTORY</span>
+                        <h3>Your Reservations</h3>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        data-target="rooms"
+                    >
+                        Book a Room
+                    </button>
+                </div>
+
+                <div class="table-wrap">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Room</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Guests</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Premium Party Room</td>
+                                <td>28 Sep 2026</td>
+                                <td>7:00 PM</td>
+                                <td>12</td>
+                                <td>
+                                    <span class="status upcoming">
+                                        Confirmed
+                                    </span>
+                                </td>
+                                <td>
+                                    <button
+                                        type="button"
+                                        class="small-btn"
+                                    >
+                                        Details
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Classic Karaoke Room</td>
+                                <td>12 Aug 2026</td>
+                                <td>6:00 PM</td>
+                                <td>6</td>
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+                                <td>
+                                    <button
+                                        type="button"
+                                        class="small-btn"
+                                    >
+                                        Details
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>VIP Karaoke Room</td>
+                                <td>05 Jul 2026</td>
+                                <td>8:00 PM</td>
+                                <td>10</td>
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+                                <td>
+                                    <button
+                                        type="button"
+                                        class="small-btn"
+                                    >
+                                        Details
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <section
+            class="content-section"
+            id="rooms"
+        >
+
+            <div class="section-header">
+                <span>EXPLORE</span>
+                <h2>Explore Rooms</h2>
+                <p>Find the perfect room for your next party.</p>
+            </div>
+
+            <div class="rooms-dashboard-grid">
+
+                <article class="room-dashboard-card">
+
+                    <img
+                        src="https://images.openai.com/static-rsc-4/nOA3muYkS9sB51KiO6B-Vz355DnTTVx50CgPMruUgksNYBnZkmAbR-bpJ3i_2i34au8OSsY7l7IcjlPOA4VzstSI0XxTmjasX9nO__U_M1ZMmjXl_tQe58qSGoB65N5aLSTdB4zAZ4ZkbPLC0axuv-xErQ3YV4YX0RXJmdnfSSLhJlk_TxULHhkvqYi2uU6V?purpose=fullsize"
+                        alt="Mini karaoke room"
+                    >
+
+                    <div>
+                        <span>UP TO 4 GUESTS</span>
+                        <h3>Mini Room</h3>
+                        <p>Compact and comfortable for small celebrations.</p>
+
+                        <button
+                            type="button"
+                            class="primary-btn"
+                            data-target="packages"
+                        >
+                            View Options
+                        </button>
+                    </div>
+
+                </article>
+
+                <article class="room-dashboard-card">
+
+                    <img
+                        src="https://images.openai.com/static-rsc-4/7Toi1_giPdWAKonOR87m2xkPyxH7a0oKHYJJ2TblD6Cz2DuCEmu7klg_k1ir6IMPqwGd02CjHImLSx8ofIpHm5-HskVK_OrqUllKqnsqRQmPlmRLiRLP0oc6URB-K9WuofuJeQn6qx9eRMmW6G9HNi9IfxV6rGLNU7fIhKJB6YHU68PtUpw3ENkq0zDktyiI?purpose=fullsize"
+                        alt="Classic karaoke room"
+                    >
+
+                    <div>
+                        <span>UP TO 8 GUESTS</span>
+                        <h3>Classic Room</h3>
+                        <p>A balanced choice for friends and family nights.</p>
+
+                        <button
+                            type="button"
+                            class="primary-btn"
+                            data-target="packages"
+                        >
+                            View Options
+                        </button>
+                    </div>
+
+                </article>
+
+                <article class="room-dashboard-card">
+
+                    <img
+                        src="https://images.openai.com/static-rsc-4/YelSieQsVIVbAjMP22tQPMflcrJZJ3FqQXf21jYo9vlCg0_QXDnhPYbhOqyIyRKJqGxnLL8LArzauYvaRi2876vMvHWnDsFePvMzE1HspN7HRTh-PKT6I5opD_hx7mCLKf-bs5OpqYQQwE9koLX0T8iZAUiL-P951OfAUfi4CvvXHCdeyJ1pw7PUrxTho7mf?purpose=fullsize"
+                        alt="Party room"
+                    >
+
+                    <div>
+                        <span>UP TO 15 GUESTS</span>
+                        <h3>Party Room</h3>
+                        <p>Spacious entertainment for larger celebrations.</p>
+
+                        <button
+                            type="button"
+                            class="primary-btn"
+                            data-target="packages"
+                        >
+                            View Options
+                        </button>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section
+            class="content-section"
+            id="packages"
+        >
+
+            <div class="section-header">
+                <span>CELEBRATE</span>
+                <h2>Packages</h2>
+                <p>Choose a package that matches your celebration.</p>
+            </div>
+
+            <div class="package-dashboard-grid">
+
+                <article class="package-dashboard-card">
+
+                    <span>STARTER</span>
+                    <h3>Mini Celebration</h3>
+                    <strong>₹2,499</strong>
+                    <p>For small groups and casual celebrations.</p>
+
+                    <ul>
+                        <li>2 hours room access</li>
+                        <li>Karaoke system</li>
+                        <li>Soft drinks</li>
+                    </ul>
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        data-target="rooms"
+                    >
+                        Choose Package
+                    </button>
+
+                </article>
+
+                <article class="package-dashboard-card featured-package">
+
+                    <span>MOST POPULAR</span>
+                    <h3>Party Night</h3>
+                    <strong>₹5,999</strong>
+                    <p>Everything you need for an unforgettable party.</p>
+
+                    <ul>
+                        <li>3 hours room access</li>
+                        <li>Food and drinks</li>
+                        <li>Decoration setup</li>
+                    </ul>
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        data-target="rooms"
+                    >
+                        Choose Package
+                    </button>
+
+                </article>
+
+                <article class="package-dashboard-card">
+
+                    <span>PREMIUM</span>
+                    <h3>VIP Experience</h3>
+                    <strong>₹9,999</strong>
+                    <p>A complete premium experience for special nights.</p>
+
+                    <ul>
+                        <li>4 hours VIP room</li>
+                        <li>Premium food menu</li>
+                        <li>Dedicated host</li>
+                    </ul>
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        data-target="rooms"
+                    >
+                        Choose Package
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section
+            class="content-section"
+            id="events"
+        >
+
+            <div class="section-header">
+                <span>DISCOVER</span>
+                <h2>Events</h2>
+                <p>Discover upcoming nights and theme events.</p>
+            </div>
+
+            <div class="event-dashboard-grid">
+
+                <article class="event-dashboard-card">
+
+                    <img
+                        src="https://images.openai.com/static-rsc-4/T2hS2PaQNedZ14iNSHLEd9IbFNm5JpYrKxE37sZAvZhnWA2STSS1r7snnSWgmcYpehOX1uZaZ8aJ-C6B28VSD5YCIp4Hr1mnBdC4_9GprmdeR2eiW1SpqieiCBXVJt8kVCRGeOT4fHVJfM7OiSzaDPPLCxhRhSCM9pFzAQlfqJBRoNG5MI5L7Yka45xQ7cGi?purpose=fullsize"
+                        alt="Live music event"
+                    >
+
+                    <div>
+                        <span>28 SEP 2026</span>
+                        <h3>Live Music Night</h3>
+                        <p>Enjoy great music, food and an energetic atmosphere.</p>
+
+                        <button
+                            type="button"
+                            class="primary-btn"
+                            data-target="rooms"
+                        >
+                            Reserve Now
+                        </button>
+                    </div>
+
+                </article>
+
+                <article class="event-dashboard-card">
+
+                    <img
+                        src="https://images.openai.com/static-rsc-4/lgbCNXoRPOTix9KrbG1jUNJMtBwZcnvF9vkA9PotF6vhK1C0cIbLAxMg9v9WDLJEob6mbRqOlT5hZ0zD--idVu49TOK7KaMq-EO6NEPWb1dJLzcu2cDIWaeNFzgudPgyY0rRB3MkMtd2K6Zz04JEIhDNxd1haUVP3V6VeRf-cDV93JX09xXq56XDeTJthhS-?purpose=fullsize"
+                        alt="DJ party event"
+                    >
+
+                    <div>
+                        <span>05 OCT 2026</span>
+                        <h3>DJ Party Night</h3>
+                        <p>Dance, sing and celebrate with your favourite people.</p>
+
+                        <button
+                            type="button"
+                            class="primary-btn"
+                            data-target="rooms"
+                        >
+                            Reserve Now
+                        </button>
+                    </div>
+
+                </article>
+
+                <article class="event-dashboard-card">
+
+                    <img
+                        src="https://images.openai.com/static-rsc-4/oL-6Wwb-i6-39AZ3yOAkJSwbgcc4o2xcvGtMFRF8NC0aUq3RvZmRTdDriH6J2hN0-utAZ99RMRD3s1v0jarnUVKKifUVkduIvCgblPBCfYTclUKvCj6PYRQZgGkpRK6QgW-hoyobwNbeRoOvH_AIBLu_9RhN7YQQuvarfq4nPxCaBMPzvhQTLx5d5fMurImZ?purpose=fullsize"
+                        alt="Family karaoke event"
+                    >
+
+                    <div>
+                        <span>18 OCT 2026</span>
+                        <h3>Family Karaoke Day</h3>
+                        <p>A fun-filled day for families and groups.</p>
+
+                        <button
+                            type="button"
+                            class="primary-btn"
+                            data-target="rooms"
+                        >
+                            Reserve Now
+                        </button>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section
+            class="content-section"
+            id="payments"
+        >
+
+            <div class="section-header">
+                <span>ACCOUNT</span>
+                <h2>Payments</h2>
+                <p>Manage your VibeRoomz payment history.</p>
+            </div>
+
+            <div class="payment-stat-grid">
+
+                <article class="payment-stat">
+                    <span>Total Spent</span>
+                    <strong>₹18,500</strong>
+                    <small>Across all bookings</small>
+                </article>
+
+                <article class="payment-stat">
+                    <span>Completed</span>
+                    <strong>₹15,200</strong>
+                    <small>Successfully paid</small>
+                </article>
+
+                <article class="payment-stat">
+                    <span>Pending</span>
+                    <strong>₹3,300</strong>
+                    <small>Awaiting payment</small>
+                </article>
+
+            </div>
+
+            <article class="dashboard-panel">
+
+                <div class="panel-heading">
+                    <div>
+                        <span>TRANSACTIONS</span>
+                        <h3>Payment History</h3>
+                    </div>
+                </div>
+
+                <div class="table-wrap">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Transaction</th>
+                                <th>Date</th>
+                                <th>Method</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Premium Party Room</td>
+                                <td>20 Sep 2026</td>
+                                <td>UPI</td>
+                                <td>₹5,999</td>
+                                <td>
+                                    <span class="status completed">
+                                        Paid
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Classic Room Booking</td>
+                                <td>02 Aug 2026</td>
+                                <td>Card</td>
+                                <td>₹2,499</td>
+                                <td>
+                                    <span class="status completed">
+                                        Paid
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Party Night Package</td>
+                                <td>25 Sep 2026</td>
+                                <td>UPI</td>
+                                <td>₹3,300</td>
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <section
+            class="content-section"
+            id="profile"
+        >
+
+            <div class="section-header">
+                <span>ACCOUNT SETTINGS</span>
+                <h2>Your Profile</h2>
+                <p>Manage your customer information.</p>
+            </div>
+
+            <div class="profile-dashboard">
+
+                <article class="profile-card-main">
+
+                    <img
+                        src="https://i.pravatar.cc/200?img=12"
+                        alt="Chandra Shekar profile"
+                    >
+
+                    <h3>Chandra Shekar</h3>
+                    <p>chandra@example.com</p>
+
+                    <span>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Verified Customer
+                    </span>
+
+                </article>
+
+                <article class="profile-form-card">
+
+                    <div class="panel-heading">
+                        <div>
+                            <span>PERSONAL INFORMATION</span>
+                            <h3>Update Profile</h3>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="profileName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="profileName"
+                            value="Chandra Shekar"
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="profileEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="profileEmail"
+                            value="chandra@example.com"
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="profilePhone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="profilePhone"
+                            value="+91 98765 43210"
+                        >
+                    </div>
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="saveProfile"
+                    >
+                        Save Changes
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <div
+        class="logout-modal"
+        id="logoutModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="logoutTitle"
+    >
+
+        <div class="logout-box">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <h2 id="logoutTitle">
+                Log out?
+            </h2>
+
+            <p>
+                Are you sure you want to log out from VibeRoomz?
+            </p>
+
+            <div>
+
+                <button
+                    type="button"
+                    class="secondary-btn"
+                    id="cancelLogout"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    class="primary-btn"
+                    id="confirmLogout"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="dashboard.js"></script>
+ <script src="main.js"></script>
+
+</body>
+
+</html>

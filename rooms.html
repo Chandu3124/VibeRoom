@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="VibeRoomz - Karaoke and Party Room Rental">
+    <meta name="keywords" content="karaoke rooms, party rooms, birthday parties, private rooms, VibeRoomz">
+    <meta name="author" content="VibeRoomz">
+
+    <title>VibeRoomz | Karaoke & Party Room Rental</title>
+<link
+        rel="icon"
+        type="image/png"
+        href="logo_dark.png"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="rooms.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <div class="logo">
+
+                <a
+                    href="index.html"
+                    class="logo-icon-link"
+                    aria-label="VibeRoomz Home"
+                >
+                    <img
+                        src="logo_light.png"
+                        alt="VibeRoomz Logo"
+                        class="brand-logo"
+                        id="headerLogo"
+                    >
+                </a>
+
+                <span class="logo-divider"></span>
+
+                <a href="index.html" class="brand-content">
+
+                    <h1 class="brand-name">
+                        <span class="vibe">VIBE</span><span class="roomz">ROOMZ</span>
+                    </h1>
+
+                    <span class="subtitle-text">
+                        KARAOKE &amp; PARTY ROOM RENTAL
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav
+                class="navbar"
+                id="mainNavbar"
+                aria-label="Main navigation"
+            >
+
+                <ul class="nav-links" id="navLinks">
+
+                    <li class="dropdown">
+
+                        <a
+                            href="#"
+                            class="dropdown-trigger"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                        >
+                            <span>Home</span>
+                            <i data-lucide="chevron-down"></i>
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a href="index.html">Home 1</a>
+                            </li>
+
+                            <li>
+                                <a href="home2.html">Home 2</a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <li>
+                        <a href="rooms.html">Rooms</a>
+                    </li>
+
+                    <li>
+                        <a href="packages.html">Packages &amp; Pricing</a>
+                    </li>
+
+                    <li>
+                        <a href="events.html">Events</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+
+                    <li>
+                        <a href="dashboard.html">Dashboard</a>
+                    </li>
+
+                </ul>
+
+
+                <!-- Mobile Actions -->
+
+                <div class="mobile-menu-actions">
+
+                    <a
+                        href="contact.html"
+                        class="btn-primary mobile-action-book"
+                    >
+                        Book
+                    </a>
+
+                    <a
+                        href="login.html"
+                        class="btn-login mobile-action-login"
+                    >
+                        Login
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <!-- Header Controls -->
+
+            <div class="buttons">
+
+                <button
+                    class="icon-btn rtl-btn"
+                    id="rtlToggle"
+                    type="button"
+                    title="RTL Mode"
+                    aria-label="Toggle RTL mode"
+                >
+                    <i data-lucide="arrow-left-right"></i>
+                </button>
+
+
+                <button
+                    class="icon-btn dark-btn"
+                    id="darkToggle"
+                    type="button"
+                    title="Dark Mode"
+                    aria-label="Toggle dark mode"
+                >
+                    <i data-lucide="moon"></i>
+                </button>
+
+
+                <a
+                    href="contact.html"
+                    class="btn-primary desktop-book"
+                >
+                    Book
+                </a>
+
+
+                <a
+                    href="login.html"
+                    class="btn-login desktop-login"
+                >
+                    Login
+                </a>
+
+
+                <button
+                    class="icon-btn menu-btn"
+                    id="menuToggle"
+                    type="button"
+                    title="Menu"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="mainNavbar"
+                >
+                    <i data-lucide="menu"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- Page content -->
+<section class="rooms-hero" aria-labelledby="roomsHeroTitle">
+    <div class="rooms-hero-overlay"></div>
+
+    <div class="rooms-hero-container">
+
+        <div class="rooms-hero-content">
+
+            <span class="rooms-hero-label">
+                VIBEROOMZ PARTY ROOMS
+            </span>
+
+            <h1 id="roomsHeroTitle">
+                Find Your
+                <span>Perfect Party Room.</span>
+            </h1>
+
+            <p class="rooms-hero-description">
+                From intimate karaoke sessions to large celebrations,
+                choose a room that fits your group and your vibe.
+            </p>
+
+            <div class="rooms-hero-actions">
+                <a
+                    href="contact.html"
+                    class="rooms-hero-btn rooms-hero-btn-primary"
+                >
+                    Check Availability
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="rooms-finder" aria-labelledby="roomsFinderTitle">
+    <div class="rooms-finder-container">
+
+        <div class="rooms-finder-heading">
+            <span class="rooms-finder-label">
+                ROOM FINDER
+            </span>
+
+            <h2 id="roomsFinderTitle">
+                Find a Room That
+                <span>Fits Your Vibe.</span>
+            </h2>
+
+            <p>
+                Tell us a little about your party and discover rooms that
+                match your group size, preferred time, location and experience.
+            </p>
+        </div>
+
+        <div class="rooms-finder-panel">
+
+            <form class="rooms-finder-form" id="roomsFinderForm">
+
+                <div class="rooms-finder-field">
+                    <label for="roomGuests">
+                        <i data-lucide="users"></i>
+                        Guests
+                    </label>
+
+                    <div class="rooms-finder-input">
+                        <i data-lucide="users"></i>
+                        <select id="roomGuests" name="guests">
+                            <option value="">Number of guests</option>
+                            <option value="2-6">2 – 6 Guests</option>
+                            <option value="6-10">6 – 10 Guests</option>
+                            <option value="10-15">10 – 15 Guests</option>
+                            <option value="15-25">15 – 25 Guests</option>
+                            <option value="25+">25+ Guests</option>
+                        </select>
+                        <i data-lucide="chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="rooms-finder-field">
+                    <label for="roomDate">
+                        <i data-lucide="calendar-days"></i>
+                        Date
+                    </label>
+
+                    <div class="rooms-finder-input">
+                        <i data-lucide="calendar-days"></i>
+                        <input
+                            type="date"
+                            id="roomDate"
+                            name="date"
+                        >
+                    </div>
+                </div>
+
+                <div class="rooms-finder-field">
+                    <label for="roomTime">
+                        <i data-lucide="clock-3"></i>
+                        Time
+                    </label>
+
+                    <div class="rooms-finder-input">
+                        <i data-lucide="clock-3"></i>
+                        <input
+                            type="time"
+                            id="roomTime"
+                            name="time"
+                        >
+                    </div>
+                </div>
+
+                <div class="rooms-finder-field">
+                    <label for="roomLocation">
+                        <i data-lucide="map-pin"></i>
+                        Location
+                    </label>
+
+                    <div class="rooms-finder-input">
+                        <i data-lucide="map-pin"></i>
+                        <select id="roomLocation" name="location">
+                            <option value="">Choose location</option>
+                            <option value="downtown">Downtown City Center</option>
+                            <option value="hitech-city">Hitech City</option>
+                            <option value="jubilee-hills">Jubilee Hills</option>
+                            <option value="banjara-hills">Banjara Hills</option>
+                        </select>
+                        <i data-lucide="chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="rooms-finder-field">
+                    <label for="roomType">
+                        <i data-lucide="door-open"></i>
+                        Room Type
+                    </label>
+
+                    <div class="rooms-finder-input">
+                        <i data-lucide="door-open"></i>
+                        <select id="roomType" name="roomType">
+                            <option value="">Choose room type</option>
+                            <option value="mini">Mini Karaoke</option>
+                            <option value="classic">Classic Party Room</option>
+                            <option value="party">Party Room</option>
+                            <option value="premium">Premium Karaoke</option>
+                            <option value="vip">VIP Party Suite</option>
+                        </select>
+                        <i data-lucide="chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="rooms-finder-field">
+                    <label for="roomFeatures">
+                        <i data-lucide="sparkles"></i>
+                        Features
+                    </label>
+
+                    <div class="rooms-finder-input">
+                        <i data-lucide="sparkles"></i>
+                        <select id="roomFeatures" name="features">
+                            <option value="">Choose a feature</option>
+                            <option value="karaoke">Karaoke Setup</option>
+                            <option value="lighting">Dynamic Lighting</option>
+                            <option value="screen">Large Screen</option>
+                            <option value="food">Food & Drinks</option>
+                            <option value="seating">Premium Seating</option>
+                        </select>
+                        <i data-lucide="chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="rooms-finder-action">
+                    <button
+                        type="submit"
+                        class="rooms-finder-btn"
+                    >
+                        Find Rooms
+                        <i data-lucide="arrow-up-right"></i>
+                    </button>
+                </div>
+
+            </form>
+
+            <div
+                class="rooms-finder-message"
+                id="roomsFinderMessage"
+                aria-live="polite"
+            ></div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="rooms-explore" aria-labelledby="roomsExploreTitle">
+    <div class="rooms-explore-container">
+
+        <div class="rooms-explore-heading">
+            <span class="rooms-explore-label">
+                EXPLORE ALL ROOMS
+            </span>
+
+            <h2 id="roomsExploreTitle">
+                Find Your
+                <span>Perfect Space.</span>
+            </h2>
+
+            <p>
+                Explore private karaoke and party rooms designed for every
+                group size, celebration style and unforgettable night out.
+            </p>
+        </div>
+
+        <div class="rooms-explore-grid">
+
+            <article class="rooms-explore-card">
+
+                <div class="rooms-explore-image">
+                    <img
+                        src="https://images.openai.com/static-rsc-4/0oYKM0PRFroqkM5Ywv_g27shVbd4WqEYV6Fx95wg-Cyu6BwGWr0yrOlLGzaGMO-8S1LP2KAJYF05Xe8d8Ff3JTwLYwDTzQ2KJZOXNPKRaUO3lxQi60qPUTywpnboSviw0TXBLRKiBi5GPaA-AiYPAvlNKaLZikYnMewsNLKqZUYk4WdPZrzTXSGwd7s44E3U?purpose=fullsize"
+                        alt="Private karaoke room with colourful lighting"
+                    >
+                    <span class="rooms-explore-image-badge">
+                        UP TO 6
+                    </span>
+                </div>
+
+                <div class="rooms-explore-content">
+
+                    <h3>Mini Karaoke Room</h3>
+
+                    <div class="rooms-explore-capacity">
+                        <i data-lucide="users"></i>
+                        <span>2 – 6 Guests</span>
+                    </div>
+
+                    <div class="rooms-explore-features">
+                        <span>Private Room</span>
+                        <span>Karaoke</span>
+                        <span>LED Lights</span>
+                    </div>
+
+                    <div class="rooms-explore-suitable">
+                        <span>SUITABLE FOR</span>
+                        <strong>Friends & Small Groups</strong>
+                    </div>
+
+                    <a href="rooms.html" class="rooms-explore-btn">
+                        View Room
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="rooms-explore-card">
+
+                <div class="rooms-explore-image">
+                    <img
+                        src="https://images.openai.com/static-rsc-4/8-3d_KJM3w_byD5ZaZgQwW-beYx_rScq7iPHxRNe-rniX5as-mAJFhVPxjzO_dsEl_GZfXK58MIx5NUbwK7ClSJEw52_WYY-lkpPL0VmiBgciCWaPq-nPj9bcz-yLtNtiCMGaMvmf1S5c05NnumL2U7Xplf0mkhMRG6A1LNoBUAV431ecb8AGA3Do4_AZYDj?purpose=fullsize"
+                        alt="Friends enjoying a karaoke party room"
+                    >
+                    <span class="rooms-explore-image-badge">
+                        UP TO 10
+                    </span>
+                </div>
+
+                <div class="rooms-explore-content">
+
+                    <h3>Classic Party Room</h3>
+
+                    <div class="rooms-explore-capacity">
+                        <i data-lucide="users"></i>
+                        <span>6 – 10 Guests</span>
+                    </div>
+
+                    <div class="rooms-explore-features">
+                        <span>Large Screen</span>
+                        <span>Karaoke</span>
+                        <span>Sound System</span>
+                    </div>
+
+                    <div class="rooms-explore-suitable">
+                        <span>SUITABLE FOR</span>
+                        <strong>Birthdays & Celebrations</strong>
+                    </div>
+
+                    <a href="rooms.html" class="rooms-explore-btn">
+                        View Room
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="rooms-explore-card">
+
+                <div class="rooms-explore-image">
+                    <img
+                        src="https://images.openai.com/static-rsc-4/brA5LIuOHGJLqxrWN93gwYVSrfGbg0dmwaVtlczsXwll8Nn_xSS-tLlywWw1kErlDHTcm0ljEDAuNw3aAO2iuQOfmcYlz354biZEJFKjC2y2FTnHpjUrJQdHYNqH_1p8XSC_FW1CKQzZXjYd0MNqrfSvG1VCmzzjT1kRAk9JvL5xRdMXzt7S2Y_GZT0tDlyX?purpose=fullsize"
+                        alt="Colourful party celebration with entertainment"
+                    >
+                    <span class="rooms-explore-image-badge">
+                        UP TO 15
+                    </span>
+                </div>
+
+                <div class="rooms-explore-content">
+
+                    <h3>Party Room</h3>
+
+                    <div class="rooms-explore-capacity">
+                        <i data-lucide="users"></i>
+                        <span>10 – 15 Guests</span>
+                    </div>
+
+                    <div class="rooms-explore-features">
+                        <span>Dance Space</span>
+                        <span>Dynamic Lights</span>
+                        <span>Big Screen</span>
+                    </div>
+
+                    <div class="rooms-explore-suitable">
+                        <span>SUITABLE FOR</span>
+                        <strong>Weekend Parties & Groups</strong>
+                    </div>
+
+                    <a href="rooms.html" class="rooms-explore-btn">
+                        View Room
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="rooms-explore-card">
+
+                <div class="rooms-explore-image">
+                    <img
+                        src="https://images.openai.com/static-rsc-4/kPre-mPhRpvTOYrALJbifeb5SpDbcyQ3hYxk1arp45CQJDqtFH_Og9h6Keo3eqmLJeUNJGE43fjaKoXs-_N6-8i7YLq4AWACundmF4yLgbpEH4rdlc6fIgDYpFBTy6EclXad4MGGrWjeHBsuPMnwbzGJ8Tj69HdSL3RnHvg5xRXMu8pD8ty1PVTJF2SNMq9s?purpose=fullsize"
+                        alt="Group enjoying a premium private party"
+                    >
+                    <span class="rooms-explore-image-badge">
+                        UP TO 20
+                    </span>
+                </div>
+
+                <div class="rooms-explore-content">
+
+                    <h3>Premium Karaoke Room</h3>
+
+                    <div class="rooms-explore-capacity">
+                        <i data-lucide="users"></i>
+                        <span>15 – 20 Guests</span>
+                    </div>
+
+                    <div class="rooms-explore-features">
+                        <span>Premium Sound</span>
+                        <span>Wireless Mics</span>
+                        <span>Food Service</span>
+                    </div>
+
+                    <div class="rooms-explore-suitable">
+                        <span>SUITABLE FOR</span>
+                        <strong>Large Celebrations</strong>
+                    </div>
+
+                    <a href="rooms.html" class="rooms-explore-btn">
+                        View Room
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="rooms-explore-card">
+
+                <div class="rooms-explore-image">
+                    <img
+                        src="https://images.openai.com/static-rsc-4/pSONCns0BKbMJC5TULiByxIIHxAdfmhMqZorJ8OM-ts7Z-ci5662gWbBftyYwWFh_d7Je3L2FOycZVxeVaLYTq4q3EYX9-PEmcBGlcxEzD9ZbvXZL22Yg-5kJ_Y7sN9h2uU2yEClxgQyLmDCvcA-PhnoLbaLeu2t6LaIguT4NA3vqYXReqz4m0zCUPHz7T8D?purpose=fullsize"
+                        alt="Large group celebrating together"
+                    >
+                    <span class="rooms-explore-image-badge">
+                        UP TO 25
+                    </span>
+                </div>
+
+                <div class="rooms-explore-content">
+
+                    <h3>VIP Party Suite</h3>
+
+                    <div class="rooms-explore-capacity">
+                        <i data-lucide="users"></i>
+                        <span>20 – 25 Guests</span>
+                    </div>
+
+                    <div class="rooms-explore-features">
+                        <span>VIP Seating</span>
+                        <span>Private Bar</span>
+                        <span>Premium Audio</span>
+                    </div>
+
+                    <div class="rooms-explore-suitable">
+                        <span>SUITABLE FOR</span>
+                        <strong>VIP Parties & Special Events</strong>
+                    </div>
+
+                    <a href="rooms.html" class="rooms-explore-btn">
+                        View Room
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="rooms-explore-card">
+
+                <div class="rooms-explore-image">
+                    <img
+                        src="https://images.openai.com/static-rsc-4/eY4X4jG6lT7KUXCFwS-2TeLtmLixkLPuCVRIwvk4ESn9JXjzeuf-xdIIpYGIECr_qliLEZTtEGswS-elxPOfafL-b3wN4cd5p3hHDuqXKrRqRqS8rqj6Sqxcy_hOfAvLRwXHjXD5KqhmotjQtBhvaImO1zcY0nOMeoODaiV5ZTlNGbgFWUNG05DJnHzvUrHv?purpose=fullsize"
+                        alt="Birthday celebration inside a private party room"
+                    >
+                    <span class="rooms-explore-image-badge">
+                        25+ GUESTS
+                    </span>
+                </div>
+
+                <div class="rooms-explore-content">
+
+                    <h3>Ultimate Celebration Room</h3>
+
+                    <div class="rooms-explore-capacity">
+                        <i data-lucide="users"></i>
+                        <span>25+ Guests</span>
+                    </div>
+
+                    <div class="rooms-explore-features">
+                        <span>Event Setup</span>
+                        <span>DJ Space</span>
+                        <span>Food & Drinks</span>
+                    </div>
+
+                    <div class="rooms-explore-suitable">
+                        <span>SUITABLE FOR</span>
+                        <strong>Big Events & Group Celebrations</strong>
+                    </div>
+
+                    <a href="rooms.html" class="rooms-explore-btn">
+                        View Room
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="rooms-amenities" aria-labelledby="roomsAmenitiesTitle">
+    <div class="rooms-amenities-container">
+
+        <div class="rooms-amenities-visual">
+
+            <img
+                src="https://images.openai.com/static-rsc-4/bhTa05NcifAQ43j9viegpMf6uosgb43OnAQUWkSbb0CyfmAIsUqvIz4a5VkrUGwJY0hsFHBrNxI8KcVbvc7W_FDnDftAuopJCtJP2Abv76Ttr7vwKUROsKBzVoc5N8lbehsJvOmPfGMXq8TYKTMnQo7fD_IHuYajgjnhVTXs6xRYsaxkJjFiykufTFiesez9?purpose=fullsize"
+                alt="Premium private karaoke room with entertainment setup"
+            >
+
+            <div class="rooms-amenities-visual-overlay"></div>
+
+            <div class="rooms-amenities-visual-content">
+                <span>INSIDE EVERY ROOM</span>
+
+                <h2>
+                    Built For
+                    <strong>Better Nights.</strong>
+                </h2>
+
+                <p>
+                    Everything you need to sing, celebrate, relax and enjoy
+                    your private party without leaving the room.
+                </p>
+            </div>
+
+            <div class="rooms-amenities-visual-badge">
+                <i data-lucide="sparkles"></i>
+                <div>
+                    <strong>Premium Experience</strong>
+                    <span>Designed around your vibe</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="rooms-amenities-content">
+
+            <div class="rooms-amenities-heading">
+
+                <span class="rooms-amenities-label">
+                    ROOM AMENITIES
+                </span>
+
+                <h2 id="roomsAmenitiesTitle">
+                    Everything You Need.
+                    <span>All In One Room.</span>
+                </h2>
+
+                <p>
+                    From powerful karaoke equipment to comfortable seating
+                    and private access, every room is equipped for a
+                    complete party experience.
+                </p>
+
+            </div>
+
+            <div class="rooms-amenities-list">
+
+                <div class="rooms-amenity-item">
+                    <div class="rooms-amenity-icon">
+                        <i data-lucide="music-2"></i>
+                    </div>
+
+                    <div class="rooms-amenity-text">
+                        <h3>Karaoke System</h3>
+                        <p>Powerful sound and an extensive song library.</p>
+                    </div>
+
+                    <i
+                        class="rooms-amenity-arrow"
+                        data-lucide="arrow-up-right"
+                    ></i>
+                </div>
+
+                <div class="rooms-amenity-item">
+                    <div class="rooms-amenity-icon">
+                        <i data-lucide="monitor-play"></i>
+                    </div>
+
+                    <div class="rooms-amenity-text">
+                        <h3>Large Screens</h3>
+                        <p>Crystal-clear displays for lyrics and entertainment.</p>
+                    </div>
+
+                    <i
+                        class="rooms-amenity-arrow"
+                        data-lucide="arrow-up-right"
+                    ></i>
+                </div>
+
+                <div class="rooms-amenity-item">
+                    <div class="rooms-amenity-icon">
+                        <i data-lucide="mic-2"></i>
+                    </div>
+
+                    <div class="rooms-amenity-text">
+                        <h3>Wireless Microphones</h3>
+                        <p>Multiple microphones ready for group performances.</p>
+                    </div>
+
+                    <i
+                        class="rooms-amenity-arrow"
+                        data-lucide="arrow-up-right"
+                    ></i>
+                </div>
+
+                <div class="rooms-amenity-item">
+                    <div class="rooms-amenity-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+
+                    <div class="rooms-amenity-text">
+                        <h3>Dynamic Lighting</h3>
+                        <p>Colourful lighting that changes with your party vibe.</p>
+                    </div>
+
+                    <i
+                        class="rooms-amenity-arrow"
+                        data-lucide="arrow-up-right"
+                    ></i>
+                </div>
+
+                <div class="rooms-amenity-item">
+                    <div class="rooms-amenity-icon">
+                        <i data-lucide="armchair"></i>
+                    </div>
+
+                    <div class="rooms-amenity-text">
+                        <h3>Comfortable Seating</h3>
+                        <p>Relaxed seating designed for long celebrations.</p>
+                    </div>
+
+                    <i
+                        class="rooms-amenity-arrow"
+                        data-lucide="arrow-up-right"
+                    ></i>
+                </div>
+
+                <div class="rooms-amenity-item">
+                    <div class="rooms-amenity-icon">
+                        <i data-lucide="utensils"></i>
+                    </div>
+
+                    <div class="rooms-amenity-text">
+                        <h3>Food Service</h3>
+                        <p>Snacks, drinks and party food available on request.</p>
+                    </div>
+
+                    <i
+                        class="rooms-amenity-arrow"
+                        data-lucide="arrow-up-right"
+                    ></i>
+                </div>
+
+                <div class="rooms-amenity-item">
+                    <div class="rooms-amenity-icon">
+                        <i data-lucide="lock-keyhole"></i>
+                    </div>
+
+                    <div class="rooms-amenity-text">
+                        <h3>Private Access</h3>
+                        <p>Your room, your group and your celebration.</p>
+                    </div>
+
+                    <i
+                        class="rooms-amenity-arrow"
+                        data-lucide="arrow-up-right"
+                    ></i>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="rooms-ambience" aria-labelledby="roomsAmbienceTitle">
+    <div class="rooms-ambience-container">
+
+        <div class="rooms-ambience-heading">
+            <span class="rooms-ambience-label">
+                ROOM AMBIENCE
+            </span>
+
+            <h2 id="roomsAmbienceTitle">
+                Choose Your
+                <span>Party Mood.</span>
+            </h2>
+
+            <p>
+                Every room has its own personality. Pick the atmosphere that
+                matches your music, your people and the kind of night you want.
+            </p>
+        </div>
+
+        <div class="rooms-ambience-grid">
+
+            <article class="rooms-ambience-card">
+                <img
+                    src="https://images.openai.com/static-rsc-4/MmzPpGeiRwbCrftnY7D14GYF0cku0d3yfUJo288-m3u_GXK1xZnvhnsLD0lj_NaFUDa3KJIxawy41v08g-P-imh2eW-V-O1UgYmnd8MxhdXfP3Cp-vdqZEg4qWzK_h9zYsCMpROKgC3LjqgXR2VtnHlsRT3-kr59tPotctID-DgIGd2_4l8l8zvlDKSstuur?purpose=fullsize"
+                    alt="Neon karaoke room with vibrant lighting"
+                >
+
+                <div class="rooms-ambience-overlay"></div>
+
+                <div class="rooms-ambience-content">
+                    <span class="rooms-ambience-number">01</span>
+
+                    <div>
+                        <small>HIGH ENERGY</small>
+                        <h3>Neon Vibe</h3>
+                        <p>
+                            Bright colours, glowing lights and a futuristic
+                            karaoke atmosphere.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="rooms-ambience-card">
+                <img
+                    src="https://images.openai.com/static-rsc-4/8N2od9C7NZYxUvFIfnKflIkP6xDYjoXSAmG71ImjAXFlPU_TE9yhQRMxaFmd-j1rkT_SpsDEYmH3exkPuzLLBZk1jyxb9oFd49QwTLWQkGlaHmOZcfgd6m12mZedhvRM2xMTMtDEwHfTSKLBrJaTJTKL3QirOkS_g9brfQorDIOnHkdA6ph9BzMPgj5ZqRBV?purpose=fullsize"
+                    alt="Luxury lounge interior"
+                >
+
+                <div class="rooms-ambience-overlay"></div>
+
+                <div class="rooms-ambience-content">
+                    <span class="rooms-ambience-number">02</span>
+
+                    <div>
+                        <small>PREMIUM MOOD</small>
+                        <h3>Luxury Lounge</h3>
+                        <p>
+                            Elegant interiors, comfortable seating and
+                            sophisticated party vibes.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="rooms-ambience-card">
+                <img
+                    src="https://images.openai.com/static-rsc-4/TiR5M87U0SMBLS0Yncsh40NRmtI9FRH2gXAH9djEF3ta_AsEylnnHQUCr3kqZUrbJ5GwJkXL45KQYJ1hGbBRH2N4qLEuOTlA8D73vDIvmIlVt0NH5j7tA6r3GmNMtGBvW-NbW6rT4mvdMlT6EX9-sTIZfMRyUoRW7krU0Xa46uOMt8s-dmBTU7z_gWEYXHo-?purpose=fullsize"
+                    alt="Colourful retro party"
+                >
+
+                <div class="rooms-ambience-overlay"></div>
+
+                <div class="rooms-ambience-content">
+                    <span class="rooms-ambience-number">03</span>
+
+                    <div>
+                        <small>PLAYFUL ENERGY</small>
+                        <h3>Retro Party</h3>
+                        <p>
+                            Colourful lights and nostalgic energy for a
+                            fun-filled celebration.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="rooms-ambience-card">
+                <img
+                    src="https://images.openai.com/static-rsc-4/iRm-QmLItj7NFRKFowrW_EW6W7opfJzxmzfdtaeN5heeeoOAzeKvnAzzyjlqbGcw2LIWEvvsP65bb1lMrW7pLxEZnDzOXObA7wWg-iby53uFFHKHEZcD3DaaP0P1T1cC8hMXU0Ns9lXpYDi6LA0-Hw8PsVNqdKZAiyUdfnhxOkeqWCV6uRcgrW_7feBZq2LZ?purpose=fullsize"
+                    alt="Energetic dance floor with party lights"
+                >
+
+                <div class="rooms-ambience-overlay"></div>
+
+                <div class="rooms-ambience-content">
+                    <span class="rooms-ambience-number">04</span>
+
+                    <div>
+                        <small>MOVE WITH THE MUSIC</small>
+                        <h3>Dance Floor</h3>
+                        <p>
+                            Open space, dynamic lighting and music that keeps
+                            everyone moving.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="rooms-ambience-card">
+                <img
+                    src="https://images.openai.com/static-rsc-4/ms6wcBDoThACht_VmXlyCehSkOpP_KN5vrbwAkE2nuiy39KW7dR-uZwMYHnCUOXdL8f6RPyHynyhNNQTt9bxAdoFc1WMUYSgM58yOLdzH1F5ip3ar1i7-gRM1TOhc2rhZu18mPYajwuj8WRXnhCLQquDDPPRVCzkO8GIq0ozP6InswgDmzs7fjR7n4LUYGKY?purpose=fullsize"
+                    alt="Premium private lounge experience"
+                >
+
+                <div class="rooms-ambience-overlay"></div>
+
+                <div class="rooms-ambience-content">
+                    <span class="rooms-ambience-number">05</span>
+
+                    <div>
+                        <small>EXCLUSIVE EXPERIENCE</small>
+                        <h3>VIP Experience</h3>
+                        <p>
+                            Premium comfort, private surroundings and an
+                            elevated celebration experience.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="rooms-ambience-card">
+                <img
+                    src="https://images.openai.com/static-rsc-4/E56f1a__RslRGVq6dwKx2LdIyLBOaLvQUPn2djzptouCaDL99SiT0pvfIuOeUXu8FhXPSqiDsO6mg5zq9QGu7Ka4U_ZlT7NtrUfImRsuRv5iVHjjrU4IAutAC5A9Dx9YFViC4AhaH7hIz5btp04r97MFJhhPIKug_LE3lSMpLgpxFD3-Gqv96t1jwOMeSM4K?purpose=fullsize"
+                    alt="Friends celebrating a special party"
+                >
+
+                <div class="rooms-ambience-overlay"></div>
+
+                <div class="rooms-ambience-content">
+                    <span class="rooms-ambience-number">06</span>
+
+                    <div>
+                        <small>CELEBRATE TOGETHER</small>
+                        <h3>Celebration Room</h3>
+                        <p>
+                            A vibrant private space designed for birthdays,
+                            milestones and group celebrations.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="rooms-right-choice" aria-labelledby="roomsRightChoiceTitle">
+    <div class="rooms-right-choice-container">
+
+        <div class="rooms-right-choice-heading">
+            <span class="rooms-right-choice-label">
+                FIND YOUR MATCH
+            </span>
+
+            <h2 id="roomsRightChoiceTitle">
+                Which Room Is
+                <span>Right For You?</span>
+            </h2>
+
+            <p>
+                Choose your occasion and discover the room that fits your
+                group, celebration and party style.
+            </p>
+        </div>
+
+        <div class="rooms-choice-selector">
+
+            <div class="rooms-choice-options">
+
+                <button
+                    type="button"
+                    class="rooms-choice-option active"
+                    data-title="Party Room"
+                    data-scenario="Birthday?"
+                    data-description="Perfect for birthdays, decorations, music, food and a fun celebration with your crew."
+                    data-image="https://images.openai.com/static-rsc-4/IANaj25g49MjvYLtPBZtwIxmTTXhiqSbkrdX47ioe_YCzF8KMlNMBnQfwsGavD0ttIsTNYDcj66jil2sjItHYR5q0jqDkrqPqQ5fy_nSFsn4sjRGiCIGhALyyo1lXYrZCE5DKZHQJbT-MOYc_sL_-0EHnlZCLmpl09SdwtxU6Q_qggq3W-lLYy4PiOobQxGF?purpose=fullsize"
+                    data-alt="Birthday celebration in a party room"
+                >
+                    <span class="rooms-choice-option-icon">
+                        <i data-lucide="cake"></i>
+                    </span>
+
+                    <span class="rooms-choice-option-content">
+                        <small>BIRTHDAY?</small>
+                        <strong>Party Room</strong>
+                        <em>Fun, vibrant and made for celebrations.</em>
+                    </span>
+
+                    <span class="rooms-choice-option-arrow">
+                        <i data-lucide="arrow-up-right"></i>
+                    </span>
+                </button>
+
+                <button
+                    type="button"
+                    class="rooms-choice-option"
+                    data-title="Classic Room"
+                    data-scenario="Small Group?"
+                    data-description="A comfortable private space for smaller groups, casual karaoke and relaxed celebrations."
+                    data-image="https://images.openai.com/static-rsc-4/Oemm-V_8qwWagjRqGjhFcRD8DpDmW8IKEwKuEn5oZXKxzCZpRxVmKl05cyPwdTG31k9WAc5nxsyKcgompA2ehZeC9CxAu74xL4TeNOVuHV3Ia4YH5TNzY2vJZNgiNdiT_fQ2DQM0PZ3tloXhNH52cLW2gdq8GZTjAOD-8sUKNhPjPqckCql-aH4iQ6BfYq-E?purpose=fullsize"
+                    data-alt="Small group enjoying a private karaoke room"
+                >
+                    <span class="rooms-choice-option-icon">
+                        <i data-lucide="users-round"></i>
+                    </span>
+
+                    <span class="rooms-choice-option-content">
+                        <small>SMALL GROUP?</small>
+                        <strong>Classic Room</strong>
+                        <em>Perfect for intimate group moments.</em>
+                    </span>
+
+                    <span class="rooms-choice-option-arrow">
+                        <i data-lucide="arrow-up-right"></i>
+                    </span>
+                </button>
+
+                <button
+                    type="button"
+                    class="rooms-choice-option"
+                    data-title="Premium Room"
+                    data-scenario="Corporate Event?"
+                    data-description="Built for team celebrations, corporate gatherings, presentations and group entertainment."
+                    data-image="https://images.openai.com/static-rsc-4/2D_5dkwHS692UWgt52AHfwkIQKIpgVQurA0HcjePFk4I75tYSnyMLtpBNLS7SGA8l1Llfkrr4QRbrcJe-Mx98Wz6jM4bXmmGkvn9YJQtZ1QbJLIep9mt5iaPZLDYVWBXB2uCnSWCTQVy0OJSQ6HrU5dJUA6bIv3x8H2WVyd-DdVWHdZtDywBlCMRQtDSN_cg?purpose=fullsize"
+                    data-alt="Corporate group event"
+                >
+                    <span class="rooms-choice-option-icon">
+                        <i data-lucide="briefcase-business"></i>
+                    </span>
+
+                    <span class="rooms-choice-option-content">
+                        <small>CORPORATE EVENT?</small>
+                        <strong>Premium Room</strong>
+                        <em>Professional setup with premium comfort.</em>
+                    </span>
+
+                    <span class="rooms-choice-option-arrow">
+                        <i data-lucide="arrow-up-right"></i>
+                    </span>
+                </button>
+
+                <button
+                    type="button"
+                    class="rooms-choice-option"
+                    data-title="VIP Room"
+                    data-scenario="Large Celebration?"
+                    data-description="The ultimate choice for large celebrations, bigger groups, premium comfort and unforgettable party experiences."
+                    data-image="https://images.openai.com/static-rsc-4/2c2A7aU0H0pTWUTd-Ya79XOFP-gT_LWRbmUZpNxJ7gjkTvMh3I1GdvvZICA3MdszCY6ZRss6d1wZN2yuGI2WkTQEyFBjEOub61YwXUnckW7AmjGtq4Mz86VaCOBJ7g_9xSOXyHXgtnF0KmS4iievQlV6gCAlhfUcUK_vyKSxwlztEPrlTS2ewb8SSUlB4Gzz?purpose=fullsize"
+                    data-alt="Large celebration with a group"
+                >
+                    <span class="rooms-choice-option-icon">
+                        <i data-lucide="party-popper"></i>
+                    </span>
+
+                    <span class="rooms-choice-option-content">
+                        <small>LARGE CELEBRATION?</small>
+                        <strong>VIP Room</strong>
+                        <em>More space for your biggest celebrations.</em>
+                    </span>
+
+                    <span class="rooms-choice-option-arrow">
+                        <i data-lucide="arrow-up-right"></i>
+                    </span>
+                </button>
+
+            </div>
+
+            <div class="rooms-choice-preview">
+
+                <img
+                    id="roomsChoiceImage"
+                    src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1400&q=90"
+                    alt="Birthday celebration in a party room"
+                >
+
+                <div class="rooms-choice-preview-overlay"></div>
+
+                <div class="rooms-choice-preview-content">
+                    <span id="roomsChoiceScenario">BIRTHDAY?</span>
+
+                    <h3 id="roomsChoiceTitle">
+                        Party Room
+                    </h3>
+
+                    <p id="roomsChoiceDescription">
+                        Perfect for birthdays, decorations, music, food and a
+                        fun celebration with your crew.
+                    </p>
+
+                    <a href="rooms.html" class="rooms-choice-preview-link">
+                        Explore This Room
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="rooms-cta" aria-labelledby="roomsCtaTitle">
+    <div class="rooms-cta-container">
+
+        <div class="rooms-cta-card">
+
+            <div class="rooms-cta-content">
+                <span class="rooms-cta-label">
+                    READY TO PARTY?
+                </span>
+
+                <h2 id="roomsCtaTitle">
+                    Found Your
+                    <span>Vibe?</span>
+                </h2>
+
+                <p>
+                    Choose your perfect room, pick your date and get ready
+                    for a night filled with music, laughter and unforgettable
+                    moments.
+                </p>
+            </div>
+
+            <div class="rooms-cta-actions">
+                <a
+                    href="contact.html"
+                    class="rooms-cta-btn rooms-cta-btn-primary"
+                >
+                    Book This Room
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="rooms-cta-btn rooms-cta-btn-secondary"
+                >
+                    Check Availability
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-top">
+
+
+                <!-- Footer Brand -->
+
+                <div class="footer-brand">
+
+                    <div class="footer-brand-row">
+
+                        <a
+                            href="index.html"
+                            class="footer-logo-link"
+                            aria-label="VibeRoomz Home"
+                        >
+                            <img
+                                src="./images/logo_light.png"
+                                alt="VibeRoomz Logo"
+                                class="footer-logo"
+                                id="footerLogo"
+                            >
+                        </a>
+
+                        <span class="footer-logo-divider"></span>
+
+                        <a
+                            href="index.html"
+                            class="footer-brand-content"
+                        >
+
+                            <h2 class="footer-brand-name">
+                                <span class="vibe">VIBE</span><span class="roomz">ROOMZ</span>
+                            </h2>
+
+                            <span class="footer-subtitle">
+                                KARAOKE &amp; PARTY ROOM RENTAL
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <p class="footer-description">
+                        VibeRoomz brings music, celebration, food, and entertainment
+                        together in private karaoke and party rooms designed for
+                        birthdays, group celebrations, events, and unforgettable nights.
+                    </p>
+
+
+                    <div class="footer-social">
+
+                        <a
+                            href="#"
+                            class="social-btn"
+                            aria-label="Instagram"
+                        >
+                            <i data-lucide="instagram"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            class="social-btn"
+                            aria-label="Facebook"
+                        >
+                            <i data-lucide="facebook"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            class="social-btn"
+                            aria-label="YouTube"
+                        >
+                            <i data-lucide="youtube"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            class="social-btn"
+                            aria-label="LinkedIn"
+                        >
+                            <i data-lucide="linkedin"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Quick Links -->
+
+                <div class="footer-column">
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="rooms.html">Rooms</a>
+                        </li>
+
+                        <li>
+                            <a href="packages.html">
+                                Packages &amp; Pricing
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="events.html">Events</a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Party Rooms -->
+
+                <div class="footer-column">
+
+                    <h3>Party Rooms</h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="rooms.html">Mini Rooms</a>
+                        </li>
+
+                        <li>
+                            <a href="rooms.html">Classic Rooms</a>
+                        </li>
+
+                        <li>
+                            <a href="rooms.html">Party Rooms</a>
+                        </li>
+
+                        <li>
+                            <a href="rooms.html">Premium Rooms</a>
+                        </li>
+
+                        <li>
+                            <a href="rooms.html">VIP Rooms</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Additional Pages -->
+
+                <div class="footer-column">
+
+                    <h3>Additional Pages</h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="error.html">404</a>
+                        </li>
+
+                        <li>
+                            <a href="soon.html">
+                                Coming Soon
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">Support</a>
+                        </li>
+
+                        <li>
+                            <a href="dashboard.html">
+                                Dashboard
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Contact -->
+
+                <div class="footer-column footer-contact">
+
+                    <h3>Contact Us</h3>
+
+                    <ul>
+
+                        <li>
+                            <i data-lucide="map-pin"></i>
+                            <span>Hyderabad, Telangana</span>
+                        </li>
+
+                        <li>
+                            <i data-lucide="phone"></i>
+                            <a href="tel:+919876543210">
+                                +91 98765 43210
+                            </a>
+                        </li>
+
+                        <li>
+                            <i data-lucide="mail"></i>
+                            <a href="mailto:hello@viberoomz.com">
+                                hello@viberoomz.com
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        href="contact.html"
+                        class="footer-cta"
+                    >
+                        Enquire Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer Bottom -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 VibeRoomz. All Rights Reserved.
+                </p>
+
+                <div class="footer-bottom-links">
+
+                    <a href="policy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="conditions.html">
+                        Terms &amp; Conditions
+                    </a>
+
+                    <!-- Back to top is now normal link -->
+
+                    <a
+                        href="#"
+                        id="backToTop"
+                    >
+                        Back to top
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+
+    <script src="main.js"></script>
+
+    <script src="rooms.js"></script>
+
+</body>
+</html>

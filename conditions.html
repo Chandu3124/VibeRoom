@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="VibeRoomz Terms and Conditions"
+    >
+
+    <title>VibeRoomz | Terms &amp; Conditions</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="logo_light.png"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="main.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="conditions.css"
+    >
+
+    <script>
+        (() => {
+            try {
+                const savedTheme =
+                    localStorage.getItem("theme");
+
+                const savedDirection =
+                    localStorage.getItem("direction");
+
+                document.documentElement.dir =
+                    savedDirection === "rtl"
+                        ? "rtl"
+                        : "ltr";
+
+                document.documentElement.dataset.theme =
+                    savedTheme === "dark"
+                        ? "dark"
+                        : "light";
+            } catch (error) {
+                document.documentElement.dir = "ltr";
+                document.documentElement.dataset.theme = "light";
+            }
+        })();
+    </script>
+</head>
+
+<body class="conditions-page-body">
+
+    <main class="conditions-page">
+
+        <!-- Page controls -->
+
+        <div class="conditions-controls">
+
+            <button
+                class="conditions-control"
+                id="termsRtlToggle"
+                type="button"
+                aria-label="Switch to right-to-left layout"
+                aria-pressed="false"
+                title="Toggle RTL mode"
+            >
+                <i data-lucide="arrow-left-right"></i>
+            </button>
+
+            <button
+                class="conditions-control"
+                id="termsThemeToggle"
+                type="button"
+                aria-label="Switch to dark mode"
+                aria-pressed="false"
+                title="Toggle dark mode"
+            >
+                <i data-lucide="moon"></i>
+            </button>
+
+        </div>
+
+
+        <article
+            class="conditions-card"
+            aria-labelledby="conditionsTitle"
+        >
+
+            <!-- Header-style brand -->
+
+            <a
+                href="index.html"
+                class="conditions-brand"
+                aria-label="VibeRoomz Home"
+            >
+
+                <span class="conditions-brand-icon">
+                    <img
+                        id="termsLogo"
+                        src="logo_light.png"
+                        data-light-logo="logo_light.png"
+                        data-dark-logo="logo_dark.png"
+                        alt="VibeRoomz Logo"
+                    >
+                </span>
+
+                <span class="conditions-brand-divider"></span>
+
+                <span class="conditions-brand-content">
+                    <strong class="conditions-brand-name">
+                        <span class="vibe">VIBE</span><span class="roomz">ROOMZ</span>
+                    </strong>
+
+                    <small>
+                        KARAOKE &amp; PARTY ROOM RENTAL
+                    </small>
+                </span>
+
+            </a>
+
+
+            <!-- Page header -->
+
+            <header class="conditions-header">
+
+                <div
+                    class="conditions-title-icon"
+                    aria-hidden="true"
+                >
+                    <i data-lucide="file-check-2"></i>
+                </div>
+
+                <span class="conditions-label">
+                    PLEASE READ CAREFULLY
+                </span>
+
+                <h1 id="conditionsTitle">
+                    Terms &amp; <strong>Conditions</strong>
+                </h1>
+
+                <p>
+                    These terms explain the rules and conditions for using
+                    VibeRoomz services and booking our private party rooms.
+                </p>
+
+                <small>
+                    Last updated: September 2026
+                </small>
+
+            </header>
+
+
+            <!-- Terms content -->
+
+            <div class="conditions-content">
+
+                <section class="conditions-section">
+                    <div class="conditions-section-title">
+                        <i data-lucide="info"></i>
+                        <h2>1. Acceptance of Terms</h2>
+                    </div>
+
+                    <p>
+                        Welcome to VibeRoomz. By accessing our website, creating
+                        an account, making a reservation or using any of our
+                        services, you agree to comply with these Terms &amp; Conditions.
+                    </p>
+
+                    <p>
+                        If you do not agree with these terms, please do not use
+                        the VibeRoomz website or services.
+                    </p>
+                </section>
+
+
+                <section class="conditions-section">
+                    <div class="conditions-section-title">
+                        <i data-lucide="user-round"></i>
+                        <h2>2. Customer Accounts</h2>
+                    </div>
+
+                    <p>
+                        Some VibeRoomz features may require you to create a
+                        customer account. You are responsible for providing
+                        accurate information and keeping your account details
+                        up to date.
+                    </p>
+
+                    <ul>
+                        <li>Provide accurate personal and contact information</li>
+                        <li>Keep your login credentials confidential</li>
+                        <li>Use your account only for lawful purposes</li>
+                        <li>Notify us if you believe your account is being misused</li>
+                    </ul>
+                </section>
+
+
+                <section class="conditions-section">
+                    <div class="conditions-section-title">
+                        <i data-lucide="calendar-check"></i>
+                        <h2>3. Room Reservations</h2>
+                    </div>
+
+                    <p>
+                        Room reservations are subject to availability. A booking
+                        becomes confirmed only after the required booking process
+                        has been successfully completed.
+                    </p>
+
+                    <p>
+                        Customers must provide correct information regarding the
+                        booking date, time, room type and number of guests.
+                    </p>
+
+                    <ul>
+                        <li>Bookings depend on room availability</li>
+                        <li>Selected time slots must be followed</li>
+                        <li>Customers should arrive on time</li>
+                        <li>Room capacity limits must not be exceeded</li>
+                    </ul>
+                </section>
+
+
+                <section class="conditions-section">
+                    <div class="conditions-section-title">
+                        <i data-lucide="clock-3"></i>
+                        <h2>4. Check-In &amp; Time Limits</h2>
+                    </div>
+
+                    <p>
+                        Customers are expected to arrive at the scheduled
+                        reservation time. Late arrival does not automatically
+                        extend the booking period.
+                    </p>
+
+                    <p>
+                        Customers should leave the room at the end of the
+                        reserved time slot so that the room can be prepared
+                        for the next booking.
+                    </p>
+                </section>
+
+
+                <section class="conditions-section">
+                    <div class="conditions-section-title">
+                        <i data-lucide="users-round"></i>
+                        <h2>5. Guest Capacity</h2>
+                    </div>
+
+                    <p>
+                        Every VibeRoomz room has a maximum guest capacity.
+                        Customers must select a room that is suitable for
+                        their group size.
+                    </p>
+
+                    <p>
+                        Exceeding the stated room capacity may result in
+                        additional restrictions or cancellation of the
+                        reservation without extending the booking time.
+                    </p>
+                </section>
+
+
+                <section class="conditions-section">
+                    <div class="conditions-section-title">
+                        <i data-lucide="credit-card"></i>
+                        <h2>6. Payments &amp; Billing</h2>
+                    </div>
+
+                    <p>
+                        Depending on the selected booking option, customers
+                        may be required to make a full or partial payment
+                        before their reservation is confirmed.
+                    </p>
+
+                    <ul>
+                        <li>Payment details must be accurate</li>
+                        <li>Applicable charges must be paid before use</li>
+                        <li>Outstanding balances may affect booking status</li>
+                        <li>Payment processing may involve third-party providers</li>
+                    </ul>
+                </section>
+
+
+                <section class="conditions-section">
+                    <div class="conditions-section-title">
+                        <i data-lucide="rotate-ccw"></i>
+                        <h2>7. Cancellation &amp; Refunds</h2>
+                    </div>
+
+                    <p>
+                        Cancellation and refund eligibility may depend on the
+                        booking type, cancellation time and applicable
+                        VibeRoomz policies.
+                    </p>
+
+                    <p>
+                        Any applicable refund will be processed according to
+                        the cancellation policy associated with the reservation.
+                    </p>
+
+                    <p>
+                        Promotional bookings, special offers or discounted
+                        reservations may have different cancellation conditions.
+                    </p>
+                </section>
+
+
+                <section class="conditions-section">
+                    <div class="conditions-section-title">
+                        <i data-lucide="ban"></i>
+                        <h2>8. Prohibited Activities</h2>
+                    </div>
+
+                    <p>
+                        Customers must use VibeRoomz rooms responsibly and
+                        must not engage in activities that may harm people,
+                        property or the reputation of VibeRoomz.
+                    </p>
+
+                    <ul>
+                        <li>Damaging furniture, equipment or property</li>
+                        <li>Exceeding room capacity</li>
+                        <li>Using the premises for unlawful activities</li>
+                        <li>Harassing staff or other customers</li>
+                        <li>Interfering with safety or security systems</li>
+                        <li>Using rooms for unauthorized commercial activities</li>
+                    </ul>
+                </section>
+
+
+                <section class="conditions-section">
+                    <div class="conditions-section-title">
+                        <i data-lucide="music-2"></i>
+                        <h2>9. Room Equipment &amp; Property</h2>
+                    </div>
+
+                    <p>
+                        VibeRoomz rooms may include karaoke systems, microphones,
+                        screens, speakers, lighting and other entertainment
+                        equipment.
+                    </p>
+
+                    <p>
+                        Customers are responsible for using all equipment
+                        carefully. Customers may be charged for damage caused
+                        by misuse, negligence or intentional actions.
+                    </p>
+                </section>
+
+
+                <section class="conditions-section">
+                    <div class="conditions-section-title">
+                        <i data-lucide="shield-alert"></i>
+                        <h2>10. Safety &amp; Customer Responsibility</h2>
+                    </div>
+
+                    <p>
+                        Customers must follow all safety instructions provided
+                        by VibeRoomz staff and must not block exits, tamper
+                        with safety equipment or create unsafe conditions.
+                    </p>
+
+                    <p>
+                        Parents, guardians or responsible adults are responsible
+                        for supervising children and minors within their group.
+                    </p>
+                </section>
+
+
+                <section class="conditions-section">
+                    <div class="conditions-section-title">
+                        <i data-lucide="megaphone"></i>
+                        <h2>11. Promotions &amp; Offers</h2>
+                    </div>
+
+                    <p>
+                        VibeRoomz may provide promotional offers, discounts,
+                        loyalty benefits and special event pricing from time
+                        to time.
+                    </p>
+
+                    <p>
+                        Offers may have specific eligibility requirements,
+                        validity periods or usage limitations. Promotional
+                        benefits cannot be exchanged for cash unless explicitly
+                        stated.
+                    </p>
+                </section>
+
+
+                <section class="conditions-section">
+                    <div class="conditions-section-title">
+                        <i data-lucide="copyright"></i>
+                        <h2>12. Website Content</h2>
+                    </div>
+
+                    <p>
+                        VibeRoomz website content, including logos, graphics,
+                        images, text, designs and branding, may be protected
+                        by applicable intellectual property laws.
+                    </p>
+
+                    <p>
+                        Content may not be copied, reproduced, modified or
+                        redistributed without appropriate authorization.
+                    </p>
+                </section>
+
+
+                <section class="conditions-section">
+                    <div class="conditions-section-title">
+                        <i data-lucide="alert-triangle"></i>
+                        <h2>13. Limitation of Liability</h2>
+                    </div>
+
+                    <p>
+                        VibeRoomz takes reasonable steps to provide a safe and
+                        enjoyable experience. However, we are not responsible
+                        for losses or damages arising from circumstances beyond
+                        our reasonable control.
+                    </p>
+
+                    <p>
+                        Customers are responsible for their personal belongings
+                        and for following the applicable room rules and safety
+                        instructions.
+                    </p>
+                </section>
+
+
+                <section class="conditions-section">
+                    <div class="conditions-section-title">
+                        <i data-lucide="x-circle"></i>
+                        <h2>14. Booking Suspension or Cancellation</h2>
+                    </div>
+
+                    <p>
+                        VibeRoomz may suspend or cancel a booking when necessary
+                        due to rule violations, safety concerns, unauthorized
+                        activity, technical issues or circumstances outside
+                        our reasonable control.
+                    </p>
+                </section>
+
+
+                <section class="conditions-section">
+                    <div class="conditions-section-title">
+                        <i data-lucide="refresh-cw"></i>
+                        <h2>15. Changes to These Terms</h2>
+                    </div>
+
+                    <p>
+                        VibeRoomz may update these Terms &amp; Conditions from time
+                        to time. Updated terms will be published on this page
+                        together with the revised update date.
+                    </p>
+
+                    <p>
+                        Continued use of our website or services after changes
+                        are published indicates acceptance of the updated terms.
+                    </p>
+                </section>
+
+
+                <section class="conditions-section conditions-contact">
+                    <div class="conditions-section-title">
+                        <i data-lucide="message-circle"></i>
+                        <h2>16. Contact Us</h2>
+                    </div>
+
+                    <p>
+                        If you have questions about these Terms &amp; Conditions,
+                        booking rules or our services, please contact the
+                        VibeRoomz support team.
+                    </p>
+
+                    <div class="conditions-contact-box">
+
+                        <div>
+                            <i data-lucide="mail"></i>
+                            <span>support@viberoomz.com</span>
+                        </div>
+
+                        <div>
+                            <i data-lucide="phone"></i>
+                            <span>+91 90000 00000</span>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+
+
+            <!-- Footer -->
+
+            <footer class="conditions-footer">
+
+                <span>
+                    © 2026 VibeRoomz. All rights reserved.
+                </span>
+
+                <a href="index.html">
+                    <span>Back to Home</span>
+                    <i data-lucide="arrow-right"></i>
+                </a>
+
+            </footer>
+
+        </article>
+
+    </main>
+
+
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
+    <script src="main.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const html = document.documentElement;
+    const body = document.body;
+
+    const themeToggle =
+        document.getElementById("termsThemeToggle");
+
+    const rtlToggle =
+        document.getElementById("termsRtlToggle");
+
+    const logo =
+        document.getElementById("termsLogo");
+
+
+    const THEME_KEY = "theme";
+    const DIRECTION_KEY = "direction";
+
+
+    function refreshIcons() {
+        if (
+            window.lucide &&
+            typeof window.lucide.createIcons === "function"
+        ) {
+            window.lucide.createIcons();
+        }
+    }
+
+
+    function getStorage(key, fallback = null) {
+        try {
+            return localStorage.getItem(key) || fallback;
+        } catch (error) {
+            return fallback;
+        }
+    }
+
+
+    function setStorage(key, value) {
+        try {
+            localStorage.setItem(key, value);
+
+            window.dispatchEvent(
+                new CustomEvent(
+                    "viberoomz-storage-change",
+                    {
+                        detail: {
+                            key,
+                            value
+                        }
+                    }
+                )
+            );
+        } catch (error) {
+            return;
+        }
+    }
+
+
+    function updateLogo(isDark) {
+        if (!logo) {
+            return;
+        }
+
+        const lightLogo =
+            logo.dataset.lightLogo;
+
+        const darkLogo =
+            logo.dataset.darkLogo;
+
+        logo.src =
+            isDark && darkLogo
+                ? darkLogo
+                : lightLogo;
+    }
+
+
+    function updateTheme(
+        theme,
+        broadcast = false
+    ) {
+        const isDark =
+            theme === "dark";
+
+        body.classList.toggle(
+            "dark-mode",
+            isDark
+        );
+
+        html.dataset.theme =
+            isDark ? "dark" : "light";
+
+        updateLogo(isDark);
+
+        if (themeToggle) {
+            themeToggle.innerHTML = `
+                <i data-lucide="${isDark ? "sun" : "moon"}"></i>
+            `;
+
+            themeToggle.setAttribute(
+                "aria-label",
+                isDark
+                    ? "Switch to light mode"
+                    : "Switch to dark mode"
+            );
+
+            themeToggle.setAttribute(
+                "aria-pressed",
+                String(isDark)
+            );
+        }
+
+        refreshIcons();
+
+        if (broadcast) {
+            window.dispatchEvent(
+                new CustomEvent(
+                    "viberoomz-theme-change",
+                    {
+                        detail: {
+                            theme: isDark
+                                ? "dark"
+                                : "light"
+                        }
+                    }
+                )
+            );
+        }
+    }
+
+
+    function updateDirection(
+        direction,
+        broadcast = false
+    ) {
+        const isRTL =
+            direction === "rtl";
+
+        html.dir =
+            isRTL ? "rtl" : "ltr";
+
+        if (rtlToggle) {
+            rtlToggle.innerHTML =
+                '<i data-lucide="arrow-left-right"></i>';
+
+            rtlToggle.setAttribute(
+                "aria-label",
+                isRTL
+                    ? "Switch to left-to-right layout"
+                    : "Switch to right-to-left layout"
+            );
+
+            rtlToggle.setAttribute(
+                "aria-pressed",
+                String(isRTL)
+            );
+        }
+
+        refreshIcons();
+
+        if (broadcast) {
+            window.dispatchEvent(
+                new CustomEvent(
+                    "viberoomz-direction-change",
+                    {
+                        detail: {
+                            direction: isRTL
+                                ? "rtl"
+                                : "ltr"
+                        }
+                    }
+                )
+            );
+        }
+    }
+
+
+    themeToggle?.addEventListener(
+        "click",
+        () => {
+            const currentTheme =
+                body.classList.contains("dark-mode")
+                    ? "dark"
+                    : "light";
+
+            const newTheme =
+                currentTheme === "dark"
+                    ? "light"
+                    : "dark";
+
+            setStorage(
+                THEME_KEY,
+                newTheme
+            );
+
+            updateTheme(
+                newTheme,
+                true
+            );
+        }
+    );
+
+
+    rtlToggle?.addEventListener(
+        "click",
+        () => {
+            const currentDirection =
+                html.dir === "rtl"
+                    ? "rtl"
+                    : "ltr";
+
+            const newDirection =
+                currentDirection === "rtl"
+                    ? "ltr"
+                    : "rtl";
+
+            setStorage(
+                DIRECTION_KEY,
+                newDirection
+            );
+
+            updateDirection(
+                newDirection,
+                true
+            );
+        }
+    );
+
+
+    window.addEventListener(
+        "viberoomz-storage-change",
+        (event) => {
+            const key =
+                event.detail?.key;
+
+            const value =
+                event.detail?.value;
+
+            if (key === THEME_KEY) {
+                updateTheme(
+                    value || "light"
+                );
+            }
+
+            if (key === DIRECTION_KEY) {
+                updateDirection(
+                    value || "ltr"
+                );
+            }
+        }
+    );
+
+
+    window.addEventListener(
+        "storage",
+        (event) => {
+            if (event.key === THEME_KEY) {
+                updateTheme(
+                    event.newValue || "light"
+                );
+            }
+
+            if (event.key === DIRECTION_KEY) {
+                updateDirection(
+                    event.newValue || "ltr"
+                );
+            }
+        }
+    );
+
+
+    window.addEventListener(
+        "viberoomz-theme-change",
+        (event) => {
+            updateTheme(
+                event.detail?.theme || "light"
+            );
+        }
+    );
+
+
+    window.addEventListener(
+        "viberoomz-direction-change",
+        (event) => {
+            updateDirection(
+                event.detail?.direction || "ltr"
+            );
+        }
+    );
+
+
+    const savedTheme =
+        getStorage(THEME_KEY) ||
+        (
+            window.matchMedia &&
+            window.matchMedia(
+                "(prefers-color-scheme: dark)"
+            ).matches
+                ? "dark"
+                : "light"
+        );
+
+    const savedDirection =
+        getStorage(
+            DIRECTION_KEY
+        ) || "ltr";
+
+
+    updateTheme(savedTheme);
+    updateDirection(savedDirection);
+    refreshIcons();
+});
+</script>
+</body>
+</html>

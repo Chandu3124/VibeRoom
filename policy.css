@@ -1,0 +1,683 @@
+/* =========================================================
+   VIBEROOMZ PRIVACY POLICY
+   Uses variables from main.css
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+html:has(.privacy-page),
+body.privacy-page-body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body.privacy-page-body {
+    overflow-x: hidden;
+
+    background: var(--soft-bg);
+    color: var(--text-dark);
+    font-family: var(--body-font);
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.privacy-page {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 46px 24px 60px;
+
+    background: var(--soft-bg);
+    color: var(--text-dark);
+}
+
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.privacy-controls {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.privacy-control {
+    width: 44px;
+    height: 44px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid var(--border-color);
+    border-radius: 11px;
+
+    background: var(--card-bg);
+    color: var(--text-dark);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.privacy-control:hover {
+    transform: translateY(-2px);
+
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.privacy-control svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.privacy-card {
+    width: min(100%, 1120px);
+
+    margin: 26px auto 0;
+    padding: 42px 58px 28px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+
+    background: var(--card-bg);
+    color: var(--text-dark);
+
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================================
+   HEADER-STYLE BRAND
+========================================================= */
+
+.privacy-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    max-width: 100%;
+
+    gap: 8px;
+    margin: 0 auto 30px;
+}
+
+.privacy-brand-icon {
+    width: 88px;
+    height: 88px;
+
+    flex: 0 0 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.privacy-brand-icon img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: contain;
+}
+
+.privacy-brand-divider {
+    width: 1px;
+    height: 52px;
+
+    flex: 0 0 1px;
+
+    background: var(--border-color);
+}
+
+.privacy-brand-content {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: left;
+}
+
+.privacy-brand-name {
+    display: block;
+
+    margin: 0;
+
+    font-size: 29px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+    white-space: nowrap;
+}
+
+.privacy-brand-name .vibe {
+    color: var(--primary-color);
+}
+
+.privacy-brand-name .roomz {
+    color: var(--secondary-color);
+}
+
+.privacy-brand-content small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   POLICY HEADER
+========================================================= */
+
+.privacy-header {
+    padding-bottom: 32px;
+
+    text-align: center;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+.privacy-title-icon {
+    width: 68px;
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 15px;
+
+    border: 1px solid var(--primary-color);
+    border-radius: 19px;
+
+    background: var(--soft-bg);
+    color: var(--primary-color);
+}
+
+.privacy-title-icon svg {
+    width: 31px;
+    height: 31px;
+}
+
+.privacy-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--secondary-color);
+
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.privacy-header h1 {
+    margin: 0 0 12px;
+
+    color: var(--text-dark);
+
+    font-size: 42px;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.privacy-header h1 strong {
+    color: var(--primary-color);
+}
+
+.privacy-header p {
+    max-width: 700px;
+
+    margin: 0 auto 11px;
+
+    color: var(--text-light);
+
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.privacy-header small {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.privacy-content {
+    padding-top: 32px;
+}
+
+.privacy-section {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+.privacy-section:last-child {
+    margin-bottom: 0;
+}
+
+.privacy-section-title {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    margin-bottom: 12px;
+}
+
+.privacy-section-title svg {
+    width: 22px;
+    height: 22px;
+
+    flex: 0 0 22px;
+
+    color: var(--primary-color);
+}
+
+.privacy-section-title h2 {
+    margin: 0;
+
+    color: var(--secondary-color);
+
+    font-size: 23px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.privacy-section p {
+    margin: 0 0 13px;
+
+    color: var(--text-dark);
+
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.privacy-section p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.privacy-section ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px 34px;
+
+    margin: 12px 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.privacy-section li {
+    position: relative;
+
+    padding-inline-start: 23px;
+
+    color: var(--text-dark);
+
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+.privacy-section li::before {
+    content: "";
+
+    position: absolute;
+    top: 9px;
+    inset-inline-start: 0;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background: var(--primary-color);
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.privacy-contact {
+    padding-bottom: 10px;
+    border-bottom: 0;
+}
+
+.privacy-contact-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+.privacy-contact-box div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 13px 17px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+
+    background: var(--soft-bg);
+    color: var(--text-dark);
+
+    font-size: 15px;
+}
+
+.privacy-contact-box svg {
+    width: 18px;
+    height: 18px;
+
+    color: var(--primary-color);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.privacy-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+
+    padding-top: 24px;
+
+    border-top: 1px solid var(--border-color);
+
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.privacy-footer a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.privacy-footer a:hover {
+    color: var(--secondary-color);
+}
+
+.privacy-footer svg {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* =========================================================
+   RTL
+========================================================= */
+
+html[dir="rtl"] .privacy-controls {
+    right: auto;
+    left: 24px;
+}
+
+html[dir="rtl"] .privacy-card {
+    direction: rtl;
+}
+
+html[dir="rtl"] .privacy-brand-content {
+    text-align: right;
+}
+
+html[dir="rtl"] .privacy-footer a svg {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+    .privacy-card {
+        padding: 36px 38px 26px;
+    }
+
+    .privacy-section ul {
+        gap: 8px 22px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+    .privacy-page {
+        padding: 72px 14px 38px;
+    }
+
+    .privacy-controls {
+        top: 14px;
+        right: 14px;
+    }
+
+    html[dir="rtl"] .privacy-controls {
+        right: auto;
+        left: 14px;
+    }
+
+    .privacy-control {
+        width: 40px;
+        height: 40px;
+    }
+
+    .privacy-control svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .privacy-card {
+        width: 100%;
+        margin-top: 0;
+        padding: 28px 20px 22px;
+        border-radius: 18px;
+    }
+
+    .privacy-brand {
+        margin-bottom: 24px;
+    }
+
+    .privacy-brand-icon {
+        width: 68px;
+        height: 68px;
+        flex-basis: 68px;
+    }
+
+    .privacy-brand-divider {
+        height: 42px;
+    }
+
+    .privacy-brand-name {
+        font-size: 22px;
+    }
+
+    .privacy-brand-content small {
+        margin-top: 5px;
+        font-size: 7px;
+        letter-spacing: 0.7px;
+    }
+
+    .privacy-header {
+        padding-bottom: 24px;
+    }
+
+    .privacy-title-icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 12px;
+        border-radius: 16px;
+    }
+
+    .privacy-title-icon svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .privacy-label {
+        font-size: 12px;
+        letter-spacing: 1.1px;
+    }
+
+    .privacy-header h1 {
+        font-size: 30px;
+    }
+
+    .privacy-header p {
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .privacy-header small {
+        font-size: 12px;
+    }
+
+    .privacy-content {
+        padding-top: 24px;
+    }
+
+    .privacy-section {
+        margin-bottom: 23px;
+        padding-bottom: 23px;
+    }
+
+    .privacy-section-title {
+        gap: 8px;
+        margin-bottom: 9px;
+    }
+
+    .privacy-section-title svg {
+        width: 19px;
+        height: 19px;
+        flex-basis: 19px;
+    }
+
+    .privacy-section-title h2 {
+        font-size: 19px;
+    }
+
+    .privacy-section p {
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .privacy-section ul {
+        grid-template-columns: 1fr;
+        gap: 7px;
+        margin-top: 9px;
+    }
+
+    .privacy-section li {
+        padding-inline-start: 20px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .privacy-section li::before {
+        top: 8px;
+        width: 6px;
+        height: 6px;
+    }
+
+    .privacy-contact-box {
+        flex-direction: column;
+        gap: 9px;
+        margin-top: 15px;
+    }
+
+    .privacy-contact-box div {
+        width: 100%;
+        padding: 11px 13px;
+        font-size: 13px;
+    }
+
+    .privacy-footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+
+        padding-top: 19px;
+
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .privacy-footer a {
+        justify-content: center;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
